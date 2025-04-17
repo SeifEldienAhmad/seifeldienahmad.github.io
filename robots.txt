@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seifeldein.github.io/sitemap.xml
