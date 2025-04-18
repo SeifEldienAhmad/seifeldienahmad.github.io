@@ -25,6 +25,7 @@
       background-color: var(--bg-color);
       color: var(--text-color);
       animation: fadeIn 1.2s ease-in-out;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     @keyframes fadeIn {
@@ -37,6 +38,7 @@
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 5px var(--shadow);
+      position: relative;
     }
 
     nav a {
@@ -49,6 +51,25 @@
 
     nav a:hover {
       color: var(--link-hover);
+    }
+
+    .toggle-theme {
+      position: absolute;
+      right: 20px;
+      top: 12px;
+      padding: 6px 12px;
+      border: 2px solid var(--link-color);
+      background: none;
+      color: var(--link-color);
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-theme:hover {
+      background-color: var(--link-color);
+      color: #000;
     }
 
     .container {
@@ -120,6 +141,7 @@
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
+    <button class="toggle-theme" onclick="toggleTheme()">🌓 Theme</button>
   </nav>
 
   <div class="container">
@@ -140,6 +162,37 @@
       <button type="submit">Send</button>
     </form>
   </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
+      const isDark = currentBg === '#121212';
+
+      if (isDark) {
+        root.style.setProperty('--bg-color', '#f9f9f9');
+        root.style.setProperty('--card-bg', '#ffffff');
+        root.style.setProperty('--text-color', '#111');
+        root.style.setProperty('--link-color', '#3366cc');
+        root.style.setProperty('--link-hover', '#1a53b0');
+        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.2)');
+        localStorage.setItem('theme', 'light');
+      } else {
+        root.style.setProperty('--bg-color', '#121212');
+        root.style.setProperty('--card-bg', '#1e1e1e');
+        root.style.setProperty('--text-color', '#e0e0e0');
+        root.style.setProperty('--link-color', '#82aaff');
+        root.style.setProperty('--link-hover', '#c3f0ff');
+        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.5)');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') toggleTheme();
+    };
+  </script>
 
 </body>
 </html>
