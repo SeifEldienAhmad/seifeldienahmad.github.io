@@ -1,131 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="JK8g75XRkL-UuKcHhBKxU22R5Ezc2uvmsA81oa9SiBE" />
+   <meta name="google-site-verification" content="JK8g75XRkL-UuKcHhBKxU22R5Ezc2uvmsA81oa9SiBE" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="The official personal website of Seif Eldein Ahmad Mohammad. Learn more about his work in cybersecurity, red teaming, and ethical hacking.">
-  <meta name="keywords" content="Seif Eldein Ahmad Mohammad, Red Teaming, Cybersecurity, Ethical Hacker, InfoSec">
-  <title>Seif Eldein Ahmad Mohammad | Official Personal Website</title>
+  <meta name="description" content="The official personal website of Seif Eldien Ahmad Mohammad. Learn more about his work in cybersecurity, red teaming, and ethical hacking.">
+  <meta name="keywords" content="Seif Eldien Ahmad Mohammad, Red Teaming, Cybersecurity, Ethical Hacker, InfoSec">
+  <title>Seif Eldien Ahmad Mohammad | Official Personal Website</title>
 
-  <!-- Font: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #82aaff;
+      --link-hover: #c3f0ff;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      animation: fadeIn 1.2s ease-in-out;
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
     nav {
-      background-color: #0057a3;
-      padding: 10px 0;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      background-color: #1e1e1e;
+      padding: 15px;
       text-align: center;
+      box-shadow: 0 2px 5px var(--shadow);
     }
-    nav ul li {
-      display: inline-block;
+
+    nav a {
       margin: 0 15px;
-    }
-    nav ul li a {
-      color: #fff;
+      color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
+      transition: color 0.3s;
     }
-    nav ul li a:hover {
-      text-decoration: underline;
+
+    nav a:hover {
+      color: var(--link-hover);
     }
+
     .container {
-      max-width: 800px;
-      margin: 50px auto;
+      max-width: 900px;
+      margin: 40px auto;
       padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--shadow);
     }
-    .top-section {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+
+    h1, h2 {
+      color: #fff;
     }
+
+    p {
+      color: #cfcfcf;
+      line-height: 1.8;
+    }
+
     .profile-pic img {
       width: 150px;
       height: 150px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #0057a3;
+      border: 3px solid #82aaff;
     }
-    h1 {
-      color: #0057a3;
-      margin: 0;
-    }
-    p {
-      line-height: 1.6;
-    }
+
     .links a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #0057a3;
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-    .contact-link-button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 12px 25px;
-      background-color: #0057a3;
-      color: white;
+      margin: 10px 15px 0 0;
+      color: var(--link-color);
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
     }
-    .contact-link-button:hover {
-      background-color: #003d73;
+
+    .links a:hover {
+      color: var(--link-hover);
     }
   </style>
 </head>
 <body>
-
   <nav>
-    <ul>
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="container">
-    <div class="top-section">
-      <div class="profile-pic">
-        <img src="myphoto.jpeg" alt="Seif Eldein Ahmad Mohammad">
-      </div>
-      <div class="content">
-        <h1>Seif Eldein Ahmad Mohammad</h1>
-        <p><strong>Cybersecurity & Red Teaming Enthusiast</strong></p>
-        <p>I'm Seif Eldein Ahmad Mohammad, a passionate cybersecurity student specializing in Red Teaming and ethical hacking. I'm studying at the Faculty of Science and building practical skills in Linux, penetration testing, and offensive security.</p>
-        <div class="links">
-          <a href="https://github.com/SeifEldienAhmad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/seif-ahmed-2263362bb" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-          <a href="https://wa.me/201008005482" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a href="https://www.facebook.com/share/1C18YF8pTm/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-          <a href="https://www.instagram.com/se.if0._1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        </div>
-        <a class="contact-link-button" href="contact.html"><i class="fas fa-paper-plane"></i> Contact Me</a>
-      </div>
+    <div class="profile-pic">
+      <img src="myphoto.jpeg" alt="Seif Eldien Ahmad Mohammad">
+    </div>
+    <h1>Seif Eldien Ahmad Mohammad</h1>
+    <p><strong>Cybersecurity & Red Teaming Enthusiast</strong></p>
+    <p>I’m a passionate cybersecurity student focusing on Red Teaming and ethical hacking. Currently studying at the Faculty of Science, I’m building hands-on skills in Linux, penetration testing, and offensive security.</p>
+    <div class="links">
+      <a href="https://github.com/SeifEldeinAhmad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/seif-ahmed-2263362bb" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://wa.me/201008005482" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://www.facebook.com/share/1C18YF8pTm/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/se.if0._1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
     </div>
   </div>
 </body>
