@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Seif Eldein Ahmad Mohammad - Cybersecurity & Red Teaming Enthusiast">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Seif Eldein Ahmad Mohammad - Cybersecurity & Red Teaming Enthusiast"/>
   <title>Seif Eldein Ahmad Mohammad</title>
-  <!-- FontAwesome icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,13 +24,11 @@
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
     }
-    .profile-pic {
-      flex-shrink: 0;
+    .top-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
     .profile-pic img {
       width: 150px;
@@ -37,12 +37,9 @@
       border-radius: 50%;
       border: 3px solid #0057a3;
     }
-    .content {
-      flex: 1;
-    }
     h1 {
       color: #0057a3;
-      margin-top: 0;
+      margin: 0;
     }
     p {
       line-height: 1.6;
@@ -51,11 +48,6 @@
       margin-right: 15px;
       text-decoration: none;
       color: #0057a3;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-    .links a i {
-      margin-right: 5px;
     }
     .links a:hover {
       text-decoration: underline;
@@ -63,58 +55,61 @@
     .contact-form {
       margin-top: 30px;
     }
-    .contact-form h3 {
+    .contact-form h2 {
       margin-bottom: 10px;
     }
     .contact-form input,
     .contact-form textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      box-sizing: border-box;
+      font-size: 14px;
     }
     .contact-form button {
       background-color: #0057a3;
       color: white;
       border: none;
       padding: 10px 20px;
+      font-size: 14px;
       border-radius: 5px;
       cursor: pointer;
     }
     .contact-form button:hover {
-      background-color: #004080;
+      background-color: #003d73;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="profile-pic">
-      <img src="myphoto.jpeg" alt="Seif Eldein">
+    <div class="top-section">
+      <div class="profile-pic">
+        <img src="myphoto.jpeg" alt="Seif Eldein">
+      </div>
+      <div class="content">
+        <h1>Seif Eldein Ahmad Mohammad</h1>
+        <p><strong>Cybersecurity & Red Teaming Enthusiast</strong></p>
+        <p>I'm a passionate cybersecurity student with a focus on Red Teaming and ethical hacking. Currently studying at the Faculty of Science, I'm developing hands-on skills in Linux, penetration testing, and offensive security.</p>
+        <div class="links">
+          <a href="https://github.com/SeifEldienAhmad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/seif-ahmed-2263362bb" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://wa.me/201008005482" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://www.facebook.com/share/1C18YF8pTm/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+          <a href="https://www.instagram.com/se.if0._1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+      </div>
     </div>
-    <div class="content">
-      <h1>Seif Eldein Ahmad Mohammad</h1>
-      <p><strong>Cybersecurity & Red Teaming Enthusiast</strong></p>
-      <p>I'm a passionate cybersecurity student with a focus on Red Teaming and ethical hacking. Currently studying at the Faculty of Science, I'm developing hands-on skills in Linux, penetration testing, and offensive security.</p>
-      <div class="links">
-        <a href="https://github.com/SeifEldienAhmad" target="_blank"><i class="fab fa-github"></i>GitHub</a>
-        <a href="https://www.linkedin.com/in/seif-ahmed-2263362bb" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
-        <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i>Email</a>
-        <a href="https://wa.me/201008005482" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-        <a href="https://www.facebook.com/share/1C18YF8pTm/" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
-        <a href="https://instagram.com/se.if0._1" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-      </div>
 
-      <div class="contact-form">
-        <h3>Contact Me</h3>
-        <form action="https://formspree.io/f/xqapvqda" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xqapvqda" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </div>
 </body>
