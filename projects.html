@@ -59,7 +59,7 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
       background-color: var(--card-bg);
@@ -79,26 +79,73 @@
       border-radius: 16px;
       margin-bottom: 25px;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
     }
 
     .project-card h2 {
       color: var(--accent-color);
     }
 
-    .project-card a {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: bold;
+    /* Slider styles */
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
     }
 
-    .project-card a:hover {
-      text-decoration: underline;
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slider-item {
+      min-width: 300px;
+      margin-right: 20px;
+      background-color: #333;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      flex-shrink: 0;
+    }
+
+    .slider-item h3 {
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    .slider-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .slider-button {
+      background-color: var(--accent-color);
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .slider-button:hover {
+      background-color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .slider-item {
+        min-width: 250px;
+      }
     }
   </style>
 </head>
@@ -120,23 +167,39 @@
     <div class="project-card">
       <h2>Personal Portfolio</h2>
       <p>A personal website built with HTML, CSS, and JavaScript to showcase my profile, skills, and projects in cybersecurity.</p>
+
+      <!-- Slider -->
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slider-item">
+            <h3>Linux Commands Cheatsheet</h3>
+            <img src="images/linux_cheatsheet_design.png" alt="Linux Cheatsheet">
+            <p>A detailed visual guide of essential Linux commands and tools.</p>
+            <a href="https://github.com/SeifEldienAhmad/Linux-cheatsheet-seif" target="_blank">View on GitHub</a>
+          </div>
+          <div class="slider-item">
+            <h3>Cybersecurity Tools Practice</h3>
+            <p><em>Coming Soon...</em></p>
+          </div>
+          <div class="slider-item">
+            <h3>Python Port Scanner</h3>
+            <p><em>Coming Soon...</em></p>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-button" onclick="slide('left')">⟨</button>
+          <button class="slider-button" onclick="slide('right')">⟩</button>
+        </div>
+      </div>
     </div>
 
-    <div class="project-card">
-      <h2>Linux Commands Cheatsheet</h2>
-      <img src="images/linux_cheatsheet_design.png" alt="Linux Commands Cheatsheet" style="width:100%; border-radius:8px; margin-top:10px;">
-      <p>A comprehensive cheatsheet that covers essential Linux commands including file handling, permissions, processes, networking, and package management tools.</p>
-      <a href="https://github.com/SeifEldienAhmad/Linux-cheatsheet-seif" target="_blank">View on GitHub</a>
-    </div>
-
-    <!-- Disqus Comments Section -->
+    <!-- Disqus -->
     <div id="disqus_thread" style="margin-top: 60px;"></div>
     <script>
       var disqus_config = function () {
         this.page.url = 'https://seifeldienahmad.github.io/projects.html';
         this.page.identifier = 'projects';
       };
-
       (function () {
         var d = document, s = d.createElement('script');
         s.src = 'https://seifeldien-blog.disqus.com/embed.js';
@@ -152,7 +215,6 @@
       const root = document.documentElement;
       const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
       const isDark = currentBg === '#121212';
-
       if (isDark) {
         root.style.setProperty('--bg-color', '#f5f5f5');
         root.style.setProperty('--card-bg', '#ffffff');
@@ -168,11 +230,26 @@
       }
     }
 
-    // Load theme from localStorage
     window.onload = () => {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') toggleDarkMode();
     };
+
+    // Slider script
+    let scrollX = 0;
+    const track = document.getElementById("sliderTrack");
+
+    function slide(direction) {
+      const step = 320;
+      if (direction === 'right') {
+        scrollX += step;
+        if (scrollX > track.scrollWidth - track.clientWidth) scrollX = 0;
+      } else {
+        scrollX -= step;
+        if (scrollX < 0) scrollX = track.scrollWidth - track.clientWidth;
+      }
+      track.style.transform = `translateX(-${scrollX}px)`;
+    }
   </script>
 </body>
 </html>
