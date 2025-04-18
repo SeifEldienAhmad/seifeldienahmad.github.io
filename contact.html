@@ -3,80 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Contact Seif Eldein Ahmad Mohammad via email, LinkedIn, or WhatsApp. Send a direct message using the form.">
-  <title>Contact Me - Seif Eldein Ahmad Mohammad</title>
+  <meta name="description" content="Contact Seif Eldien Ahmad Mohammad via email, LinkedIn, or WhatsApp. Send a message directly.">
+  <title>Contact Me - Seif Eldien Ahmad Mohammad</title>
 
-  <!-- Google Font: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #82aaff;
+      --link-hover: #c3f0ff;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      color: #333;
-      font-size: 18px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     nav {
-      background-color: #0057a3;
-      padding: 10px 0;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      background-color: #1e1e1e;
+      padding: 15px;
       text-align: center;
+      box-shadow: 0 2px 5px var(--shadow);
     }
 
-    nav ul li {
-      display: inline-block;
+    nav a {
       margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
+      color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
       font-size: 18px;
     }
 
-    nav ul li a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: var(--link-hover);
     }
 
     .container {
       max-width: 800px;
       margin: 50px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 0 15px var(--shadow);
     }
 
     h1, h2 {
-      color: #0057a3;
-      margin-bottom: 10px;
+      color: #ffffff;
     }
 
     .contact-info a {
       display: block;
       margin-bottom: 10px;
-      color: #0057a3;
+      color: var(--link-color);
       text-decoration: none;
-      font-size: 20px;
-    }
-
-    .contact-info a i {
-      margin-right: 8px;
+      font-size: 18px;
     }
 
     .contact-info a:hover {
-      text-decoration: underline;
+      color: var(--link-hover);
     }
 
     form {
@@ -88,13 +85,19 @@
       padding: 10px;
       margin-bottom: 12px;
       border-radius: 5px;
-      border: 1px solid #ccc;
-      font-family: 'Poppins', sans-serif;
+      border: 1px solid #444;
+      background-color: #1c1c1c;
+      color: #e0e0e0;
       font-size: 16px;
     }
 
+    input::placeholder,
+    textarea::placeholder {
+      color: #999;
+    }
+
     button {
-      background-color: #0057a3;
+      background-color: var(--link-color);
       color: white;
       padding: 10px 25px;
       border: none;
@@ -104,7 +107,8 @@
     }
 
     button:hover {
-      background-color: #003d73;
+      background-color: var(--link-hover);
+      color: #000;
     }
   </style>
 </head>
@@ -112,17 +116,15 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <ul>
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="container">
     <h1>Contact Me</h1>
-    <p>You can reach out to me using any of the methods below:</p>
+    <p>You can reach me directly via:</p>
 
     <div class="contact-info">
       <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> seifahmed7293@gmail.com</a>
