@@ -3,119 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Projects by Seif Eldien Ahmad Mohammad - Cybersecurity, Red Teaming, Python tools and more.">
-  <title>Projects - Seif Eldien Ahmad Mohammad</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Projects - Seif Eldien</title>
   <style>
-    :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --link-color: #82aaff;
-      --link-hover: #c3f0ff;
-      --card-bg: #1e1e1e;
-      --shadow: rgba(0, 0, 0, 0.5);
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      animation: fadeIn 1.2s ease-in-out;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      animation: fadeIn 1s ease-in;
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    nav {
-      background-color: #1e1e1e;
-      padding: 15px;
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 5px var(--shadow);
     }
 
     nav a {
+      color: #82aaff;
       margin: 0 15px;
-      color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: var(--link-hover);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 0 15px var(--shadow);
-    }
-
-    h1, h2 {
       color: #ffffff;
     }
 
-    .project {
-      margin-bottom: 30px;
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .project h3 {
-      color: var(--link-color);
-      margin-bottom: 8px;
+    h1 {
+      color: #ffffff;
     }
 
-    .project p {
-      color: #cfcfcf;
+    h2 {
+      color: #82aaff;
+      margin-top: 25px;
+    }
+
+    p {
       line-height: 1.6;
-    }
-
-    .project a {
-      text-decoration: none;
-      color: var(--link-color);
-    }
-
-    .project a:hover {
-      color: var(--link-hover);
     }
   </style>
 </head>
 <body>
+  <header>
+    <h2>Seif Eldien</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="container">
+  <main>
     <h1>My Projects</h1>
 
-    <div class="project">
-      <h3>Personal Portfolio</h3>
-      <p>A personal website built with HTML, CSS, and JavaScript to showcase my profile, skills, and projects in cybersecurity.</p>
-    </div>
+    <h2>Personal Portfolio</h2>
+    <p>A personal website built with HTML, CSS, and JavaScript to showcase my profile, skills, and projects in cybersecurity.</p>
 
-    <div class="project">
-      <h3>Cybersecurity Tools Practice</h3>
-      <p>Practiced tools like Nmap, Metasploit, and Wireshark in Kali Linux to simulate real-world red teaming scenarios.</p>
-    </div>
+    <h2>Cybersecurity Tools Practice</h2>
+    <p>Practiced tools like Nmap, Metasploit, and Wireshark in Kali Linux to simulate real-world red teaming scenarios.</p>
 
-    <div class="project">
-      <h3>Python Port Scanner</h3>
-      <p>A simple Python script to scan open ports using the socket library as part of my penetration testing learning path.</p>
-    </div>
-  </div>
+    <h2>Python Port Scanner</h2>
+    <p>A simple Python script to scan open ports using the socket library as part of my penetration testing learning path.</p>
 
+    <!-- Disqus Comments Section -->
+    <div id="disqus_thread" style="margin-top: 60px;"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://seifeldienahmad.github.io/projects.html';
+        this.page.identifier = 'projects';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://seifeldien-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </main>
 </body>
 </html>
