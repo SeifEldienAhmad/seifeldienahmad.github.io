@@ -3,138 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Projects by Seif Eldein Ahmad Mohammad - Red Teaming, Cybersecurity Tools, and Hands-on Labs.">
-  <title>Projects - Seif Eldein Ahmad Mohammad</title>
-
-  <!-- Google Font: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      font-size: 18px;
-    }
-
-    nav {
-      background-color: #0057a3;
-      padding: 10px 0;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      color: #0057a3;
-    }
-
-    .project {
-      border-bottom: 1px solid #ddd;
-      padding: 15px 0;
-    }
-
-    .project:last-child {
-      border-bottom: none;
-    }
-
-    .project h3 {
-      margin-bottom: 5px;
-    }
-
-    .project p {
-      margin: 0 0 10px;
-    }
-
-    .project a {
-      color: #0057a3;
-      text-decoration: none;
-    }
-
-    .project a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Seif Eldien | Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+  <script src="https://kit.fontawesome.com/6f17d0855f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Seif Eldien</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </nav>
+  <main>
+    <section class="projects-section">
+      <h1>My Projects</h1>
+      <div class="project-list">
+        <div class="project">
+          <h2>Personal Portfolio</h2>
+          <p>A personal website built with HTML, CSS, and JavaScript to showcase my profile and projects.</p>
+        </div>
+        <div class="project">
+          <h2>Cybersecurity Tools Review</h2>
+          <p>Analyzing and documenting the use of various cybersecurity tools during my learning journey.</p>
+        </div>
+        <!-- Add more projects here -->
+      </div>
+    </section>
+  </main>
 
-  <div class="container">
-    <h1>My Projects</h1>
-    <p>Here are some of the cybersecurity and red teaming projects I've worked on or practiced. More will be added as I grow!</p>
-
-    <!-- Project 1 -->
-    <div class="project">
-      <h3>Kali Linux Tools Practice</h3>
-      <p>Practiced tools like Nmap, Metasploit, Hydra, and Wireshark in a virtual lab to simulate real-world red teaming scenarios.</p>
-      <a href="https://github.com/SeifEldienAhmad" target="_blank">View on GitHub</a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project">
-      <h3>Python Script: Port Scanner</h3>
-      <p>A simple Python script to scan open ports on a given IP, as a hands-on exercise in socket programming.</p>
-      <a href="#">Project Link (Coming Soon)</a>
-    </div>
-
-    <!-- Disqus Comments -->
-    <div id="disqus_thread" style="margin-top: 40px;"></div>
-    <script>
+  <!-- Disqus Comments Section -->
+  <div id="disqus_thread"></div>
+  <script>
       var disqus_config = function () {
-        this.page.url = "https://seifeldeinahmad.github.io/projects.html";
-        this.page.identifier = "projects-page";
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
       };
+
       (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://seifeldein-blog.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+          var d = document, s = d.createElement('script');
+          s.src = 'https://seifeldein-blog.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
       })();
-    </script>
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-  </div>
+  </script>
+  <noscript>Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
 
 </body>
 </html>
