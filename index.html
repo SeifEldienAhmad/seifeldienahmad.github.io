@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta name="google-site-verification" content="JK8g75XRkL-UuKcHhBKxU22R5Ezc2uvmsA81oa9SiBE" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="The official personal website of Seif Eldein Ahmad Mohammad. Learn more about his work in cybersecurity, red teaming, and ethical hacking.">
-  <meta name="keywords" content="Seif Eldein Ahmad Mohammad, سيف الدين أحمد محمد, Red Teaming, Cybersecurity, Ethical Hacker, InfoSec">
-  <title>Seif Eldein Ahmad Mohammad | Official Personal Website</title>
+  <meta name="description" content="The official personal website of Seif Eldien Ahmad Mohammad. Learn more about his work in cybersecurity, red teaming, and ethical hacking.">
+  <meta name="keywords" content="Seif Eldien Ahmad Mohammad, سيف الدين أحمد محمد, Red Teaming, Cybersecurity, Ethical Hacker, InfoSec">
+  <title>Seif Eldien Ahmad Mohammad | Official Personal Website</title>
 
+  <!-- Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
@@ -24,22 +26,26 @@
       background-color: #0057a3;
       padding: 10px 0;
     }
+
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       text-align: center;
     }
+
     nav ul li {
       display: inline-block;
       margin: 0 15px;
     }
+
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
     }
+
     nav ul li a:hover {
       text-decoration: underline;
     }
@@ -52,11 +58,14 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     .top-section {
       display: flex;
       align-items: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
+
     .profile-pic img {
       width: 150px;
       height: 150px;
@@ -64,46 +73,39 @@
       border-radius: 50%;
       border: 3px solid #0057a3;
     }
+
     h1 {
       color: #0057a3;
       margin: 0;
     }
+
     p {
       line-height: 1.6;
     }
+
     .links a {
       margin-right: 15px;
       text-decoration: none;
       color: #0057a3;
     }
+
     .links a:hover {
       text-decoration: underline;
     }
-    .contact-form {
+
+    .contact-link-button {
+      display: inline-block;
       margin-top: 30px;
-    }
-    .contact-form h2 {
-      margin-bottom: 10px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-    .contact-form button {
+      padding: 12px 25px;
       background-color: #0057a3;
       color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 14px;
-      border-radius: 5px;
-      cursor: pointer;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
     }
-    .contact-form button:hover {
+
+    .contact-link-button:hover {
       background-color: #003d73;
     }
   </style>
@@ -113,10 +115,10 @@
   <!-- Navigation Bar -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+      <li><a href="about.html"><i class="fas fa-user"></i> من أنا</a></li>
+      <li><a href="projects.html"><i class="fas fa-code"></i> مشاريعي</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
     </ul>
   </nav>
 
@@ -137,17 +139,10 @@
           <a href="https://www.facebook.com/share/1C18YF8pTm/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
           <a href="https://www.instagram.com/se.if0._1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
-      </div>
-    </div>
 
-    <div class="contact-form">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xqapvqda" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+        <!-- 🔗 Contact Me Button -->
+        <a class="contact-link-button" href="contact.html"><i class="fas fa-paper-plane"></i> تواصل معايا</a>
+      </div>
     </div>
   </div>
 </body>
