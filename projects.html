@@ -58,7 +58,7 @@
 
     h1 {
       text-align: center;
-      color: #fff;
+      color: var(--text-color);
     }
 
     /* Projects Slider */
@@ -105,6 +105,7 @@
     .project-slide p {
       font-size: 0.95em;
       margin: 10px 0;
+      color: var(--text-color);
     }
 
     .project-slide a {
@@ -162,20 +163,18 @@
     <h1>My Projects</h1>
 
     <div class="project-card">
-      <h2>Personal Portfolio</h2>
-      <p>A personal website built with HTML, CSS, and JavaScript to showcase my profile, skills, and projects in cybersecurity.</p>
-
+      <h2>Featured Projects</h2>
       <div class="slider-container">
         <button class="arrow arrow-left" onclick="slide(-1)">&#8249;</button>
         <div class="slider-wrapper" id="slider">
           <!-- Linux Cheatsheet Project Slide -->
           <div class="project-slide">
-            <img src="images/linux_cheatsheet_dragon.png" alt="Linux Cheatsheet Dragon Logo">
+            <img src="linux_cheatsheet_design.png" alt="Linux Cheatsheet Dragon Logo">
             <h3>Linux Commands Cheatsheet</h3>
             <p>A comprehensive guide to essential Linux commands for file handling, permissions, networking, and more.</p>
             <a href="https://github.com/SeifEldienAhmad/Linux-cheatsheet-seif" target="_blank">View Project</a>
           </div>
-          <!-- Add more slides below if needed -->
+          <!-- Add more project slides here if needed -->
         </div>
         <button class="arrow arrow-right" onclick="slide(1)">&#8250;</button>
       </div>
