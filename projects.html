@@ -59,7 +59,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: 40px auto;
       padding: 20px;
       background-color: var(--card-bg);
@@ -79,13 +79,28 @@
       border-radius: 16px;
       margin-bottom: 25px;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
     }
 
     .project-card h2 {
       color: var(--accent-color);
     }
 
-    /* Slider styles */
+    .project-card a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
     .slider-container {
       position: relative;
       overflow: hidden;
@@ -95,57 +110,42 @@
     .slider-track {
       display: flex;
       transition: transform 0.5s ease;
+      width: fit-content;
     }
 
     .slider-item {
-      min-width: 300px;
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      background-color: #3a3a3a;
       margin-right: 20px;
-      background-color: #333;
       border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      flex-shrink: 0;
-    }
-
-    .slider-item h3 {
-      color: var(--accent-color);
-      margin-bottom: 10px;
     }
 
     .slider-item img {
       width: 100%;
       border-radius: 8px;
-      margin-bottom: 10px;
+      margin-top: 10px;
     }
 
     .slider-controls {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       width: 100%;
       display: flex;
       justify-content: space-between;
+      transform: translateY(-50%);
     }
 
     .slider-button {
       background-color: var(--accent-color);
-      color: #000;
       border: none;
-      padding: 8px 12px;
-      cursor: pointer;
+      padding: 10px 15px;
+      color: #000;
       font-weight: bold;
       border-radius: 50%;
-      transition: background-color 0.3s;
-    }
-
-    .slider-button:hover {
-      background-color: #ffffff;
-    }
-
-    @media (max-width: 600px) {
-      .slider-item {
-        min-width: 250px;
-      }
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -175,7 +175,7 @@
             <h3>Linux Commands Cheatsheet</h3>
             <img src="images/linux_cheatsheet_design.png" alt="Linux Cheatsheet">
             <p>A detailed visual guide of essential Linux commands and tools.</p>
-            <a href="https://github.com/SeifEldienAhmad/Linux-cheatsheet-seif" target="_blank">View on GitHub</a>
+            <a href="https://github.com/SeifEldienAhmad/Linux-cheatsheet-seif" target="_blank">View Project</a>
           </div>
           <div class="slider-item">
             <h3>Cybersecurity Tools Practice</h3>
@@ -193,13 +193,14 @@
       </div>
     </div>
 
-    <!-- Disqus -->
+    <!-- Disqus Comments Section -->
     <div id="disqus_thread" style="margin-top: 60px;"></div>
     <script>
       var disqus_config = function () {
         this.page.url = 'https://seifeldienahmad.github.io/projects.html';
         this.page.identifier = 'projects';
       };
+
       (function () {
         var d = document, s = d.createElement('script');
         s.src = 'https://seifeldien-blog.disqus.com/embed.js';
@@ -215,6 +216,7 @@
       const root = document.documentElement;
       const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
       const isDark = currentBg === '#121212';
+
       if (isDark) {
         root.style.setProperty('--bg-color', '#f5f5f5');
         root.style.setProperty('--card-bg', '#ffffff');
@@ -230,25 +232,25 @@
       }
     }
 
+    // Load theme from localStorage
     window.onload = () => {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') toggleDarkMode();
     };
 
-    // Slider script
-    let scrollX = 0;
-    const track = document.getElementById("sliderTrack");
-
+    let currentIndex = 0;
     function slide(direction) {
-      const step = 320;
-      if (direction === 'right') {
-        scrollX += step;
-        if (scrollX > track.scrollWidth - track.clientWidth) scrollX = 0;
+      const track = document.getElementById("sliderTrack");
+      const items = document.querySelectorAll(".slider-item");
+      const total = items.length;
+
+      if (direction === "left") {
+        currentIndex = (currentIndex - 1 + total) % total;
       } else {
-        scrollX -= step;
-        if (scrollX < 0) scrollX = track.scrollWidth - track.clientWidth;
+        currentIndex = (currentIndex + 1) % total;
       }
-      track.style.transform = `translateX(-${scrollX}px)`;
+
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
   </script>
 </body>
