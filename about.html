@@ -6,61 +6,63 @@
   <meta name="description" content="Learn more about Seif Eldein Ahmad Mohammad, a cybersecurity student with strong communication and presentation skills.">
   <title>About Me - Seif Eldein Ahmad Mohammad</title>
 
-  <!-- Google Font: Caveat -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #82aaff;
+      --link-hover: #c3f0ff;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+
     body {
       font-family: 'Caveat', cursive;
-      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       font-size: 22px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     nav {
-      background-color: #0057a3;
-      padding: 10px 0;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      background-color: #1e1e1e;
+      padding: 15px;
       text-align: center;
+      box-shadow: 0 2px 5px var(--shadow);
     }
 
-    nav ul li {
-      display: inline-block;
+    nav a {
       margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
+      color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
+      transition: color 0.3s;
     }
 
-    nav ul li a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: var(--link-hover);
     }
 
     .container {
       max-width: 800px;
       margin: 40px auto;
       padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--shadow);
     }
 
     h1, h2 {
-      color: #0057a3;
-      margin-bottom: 10px;
+      color: #fff;
     }
 
     ul {
@@ -71,28 +73,29 @@
       margin-bottom: 8px;
     }
 
+    p {
+      color: #cfcfcf;
+    }
+
     .social a {
       font-size: 24px;
       margin-right: 15px;
       text-decoration: none;
-      color: #0057a3;
+      color: var(--link-color);
     }
 
     .social a:hover {
-      color: #003d73;
+      color: var(--link-hover);
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
   <nav>
-    <ul>
-      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="container">
