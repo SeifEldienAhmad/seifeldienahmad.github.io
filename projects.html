@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مشاريع سيف الدين أحمد محمد في مجال الأمن السيبراني والريد تيمينج">
+    <title>مشاريعي - Seif Eldien Ahmad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> من أنا</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> مشاريعي</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
+            </ul>
+        </nav>
+        <h1>مشاريعي</h1>
+        <p>هنا هتلاقي شغل بيظهر اهتمامي وتطوري في الأمن السيبراني</p>
+    </header>
+
+    <main>
+        <section class="projects">
+            <article class="project">
+                <h2>تحليل ثغرات على كالي لينكس</h2>
+                <p>اشتغلت على أدوات زي Nmap وMetasploit لتحليل ثغرات وهمية بهدف التعلم والتدريب العملي.</p>
+            </article>
+
+            <article class="project">
+                <h2>سكريبتات بايثون للأتمتة</h2>
+                <p>كتبت سكريبتات بسيطة بأستخدمها في المهام اليومية زي فحص المنافذ أو التعامل مع ملفات اللوج.</p>
+            </article>
+
+            <!-- ممكن تضيف مشاريع تانية بنفس الشكل فوق -->
+
+        </section>
+
+        <!-- 🔽 سكريبت الكومنتس -->
+        <div id="disqus_thread" style="margin-top: 50px;"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = "https://seifeldeinahmad.github.io/projects.html";
+                this.page.identifier = "projects-page";
+            };
+
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://seifeldein-blog.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>
+            من فضلك فعّل JavaScript لعرض التعليقات عبر <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+        </noscript>
+    </main>
+
+</body>
+</html>
