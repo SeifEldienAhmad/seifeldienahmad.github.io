@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap to help crawlers index your site
+Sitemap: https://seifeldein.github.io/sitemap.xml
+
+# Recommended: set crawl-delay if needed (optional)
+# Crawl-delay: 5
+
+# Optional: Block internal folders (if any exist in the future)
+# Disallow: /private/
+# Disallow: /drafts/
