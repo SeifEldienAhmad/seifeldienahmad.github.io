@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Seif Eldien | Projects</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-  <script src="https://kit.fontawesome.com/6f17d0855f.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Projects - Seif Eldien</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #2c2c2c;
+    }
+
+    nav {
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #5c3dff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2c00cc;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      color: #3a3a3a;
+      margin-top: 25px;
+    }
+
+    p {
+      max-width: 700px;
+      line-height: 1.8;
+      font-size: 1.05em;
+      color: #555;
+    }
+
+    section {
+      background-color: #f5f5f5;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html" class="logo">Seif Eldien</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-      </ul>
-    </nav>
+    <h1>My Projects</h1>
   </header>
 
-  <main>
-    <section class="projects-section">
-      <h1>My Projects</h1>
-      <div class="project-list">
-        <div class="project">
-          <h2>Personal Portfolio</h2>
-          <p>A personal website built with HTML, CSS, and JavaScript to showcase my profile and projects.</p>
-        </div>
-        <div class="project">
-          <h2>Cybersecurity Tools Review</h2>
-          <p>Analyzing and documenting the use of various cybersecurity tools during my learning journey.</p>
-        </div>
-        <!-- Add more projects here -->
-      </div>
-    </section>
-  </main>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+  </nav>
 
-  <!-- Disqus Comments Section -->
-  <div id="disqus_thread"></div>
-  <script>
-      var disqus_config = function () {
-          this.page.url = window.location.href;
-          this.page.identifier = window.location.pathname;
-      };
+  <section>
+    <h2>Personal Portfolio</h2>
+    <p>A personal website built with HTML, CSS, and JavaScript to showcase my profile and projects.</p>
 
-      (function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://seifeldein-blog.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the 
-    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-
+    <h2>Cybersecurity Tools Review</h2>
+    <p>Analyzing and documenting the use of various cybersecurity tools during my learning journey.</p>
+  </section>
 </body>
 </html>
