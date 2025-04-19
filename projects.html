@@ -180,3 +180,151 @@
       position: fixed;
       z-index: 1000;
       padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 12px;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #disqus_thread {
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-dark" onclick="toggleDarkMode()">🌓 Theme</button>
+  </header>
+
+  <main>
+    <h1>Personal Portfolio</h1>
+    <p class="center-text">A personal website was built to showcase my profile, skills, and projects in cybersecurity.</p>
+
+    <div class="project-card">
+      <h2>My Projects</h2>
+      <div class="slider-container">
+        <button class="arrow arrow-left" onclick="slide(-1)">&#8249;</button>
+        <div class="slider-wrapper" id="slider">
+          <div class="project-slide">
+            <img src="linux_cheatsheet_dragon.png" alt="Linux Cheatsheet Dragon Logo">
+            <h3>Linux Commands Cheatsheet</h3>
+            <p>A comprehensive guide to essential Linux commands for file handling, permissions, networking, and more.</p>
+            <a href="https://github.com/SeifEldienAhmad/Linux-cheatsheet-seif" target="_blank">View Project</a>
+          </div>
+        </div>
+        <button class="arrow arrow-right" onclick="slide(1)">&#8250;</button>
+      </div>
+    </div>
+
+    <div id="imgModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://seifeldienahmad.github.io/projects.html';
+        this.page.identifier = 'projects';
+      };
+      (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://seifeldein-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+  </main>
+
+  <script>
+    let currentIndex = 0;
+    function slide(direction) {
+      const slider = document.getElementById('slider');
+      const slides = slider.children.length;
+      const slideWidth = 270;
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = slides - 1;
+      if (currentIndex >= slides) currentIndex = 0;
+      slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function toggleDarkMode() {
+      const root = document.documentElement;
+      const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
+      const isDark = currentBg === '#121212';
+
+      if (isDark) {
+        root.style.setProperty('--bg-color', '#f5f5f5');
+        root.style.setProperty('--card-bg', '#ffffff');
+        root.style.setProperty('--text-color', '#111111');
+        root.style.setProperty('--accent-color', '#3366cc');
+        root.style.setProperty('--slide-bg', '#ffffff');
+        root.style.setProperty('--link-color', '#3366cc');
+        root.style.setProperty('--link-hover', '#000000');
+        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.1)');
+        localStorage.setItem('theme', 'light');
+      } else {
+        root.style.setProperty('--bg-color', '#121212');
+        root.style.setProperty('--card-bg', '#1e1e1e');
+        root.style.setProperty('--text-color', '#e0e0e0');
+        root.style.setProperty('--accent-color', '#82aaff');
+        root.style.setProperty('--slide-bg', '#2b2b2b');
+        root.style.setProperty('--link-color', '#82aaff');
+        root.style.setProperty('--link-hover', '#ffffff');
+        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.3)');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') toggleDarkMode();
+
+      document.querySelectorAll('.project-slide img').forEach(img => {
+        img.addEventListener('click', () => {
+          const modal = document.getElementById('imgModal');
+          const modalImg = document.getElementById('modalImg');
+          modal.style.display = "block";
+          modalImg.src = img.src;
+        });
+      });
+    };
+
+    function closeModal() {
+      document.getElementById('imgModal').style.display = "none";
+    }
+  </script>
+</body>
+</html>
