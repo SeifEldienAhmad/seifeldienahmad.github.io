@@ -82,7 +82,7 @@
     }
 
     h1, h2 {
-      color: #ffffff;
+      color: var(--text-color);
     }
 
     .contact-info a {
@@ -190,9 +190,7 @@
 
     window.onload = () => {
       const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') {
-        toggleTheme(); // Toggle once to switch from default dark to light
-      }
+      if (savedTheme === 'light') toggleTheme();
     };
   </script>
 
