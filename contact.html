@@ -16,6 +16,8 @@
       --link-hover: #c3f0ff;
       --card-bg: #1e1e1e;
       --shadow: rgba(0, 0, 0, 0.5);
+      --input-bg: #1c1c1c;
+      --input-text: #e0e0e0;
     }
 
     body {
@@ -107,9 +109,10 @@
       margin-bottom: 12px;
       border-radius: 5px;
       border: 1px solid #444;
-      background-color: #1c1c1c;
-      color: #e0e0e0;
+      background-color: var(--input-bg);
+      color: var(--input-text);
       font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     input::placeholder,
@@ -176,6 +179,8 @@
         root.style.setProperty('--link-color', '#3366cc');
         root.style.setProperty('--link-hover', '#1a53b0');
         root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.2)');
+        root.style.setProperty('--input-bg', '#ffffff');
+        root.style.setProperty('--input-text', '#111');
         localStorage.setItem('theme', 'light');
       } else {
         root.style.setProperty('--bg-color', '#121212');
@@ -184,6 +189,8 @@
         root.style.setProperty('--link-color', '#82aaff');
         root.style.setProperty('--link-hover', '#c3f0ff');
         root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.5)');
+        root.style.setProperty('--input-bg', '#1c1c1c');
+        root.style.setProperty('--input-text', '#e0e0e0');
         localStorage.setItem('theme', 'dark');
       }
     }
