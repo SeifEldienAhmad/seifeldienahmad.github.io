@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta name="google-site-verification" content="JK8g75XRkL-UuKcHhBKxU22R5Ezc2uvmsA81oa9SiBE" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-site-verification" content="JK8g75XRkL-UuKcHhBKxU22R5Ezc2uvmsA81oa9SiBE" />
   <meta name="description" content="The official personal website of Seif Eldien Ahmad Mohammad. Learn more about his work in cybersecurity, red teaming, and ethical hacking.">
   <meta name="keywords" content="Seif Eldien Ahmad Mohammad, Red Teaming, Cybersecurity, Ethical Hacker, InfoSec">
   <title>Seif Eldien Ahmad Mohammad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --primary-color-light: #ffffff;
@@ -51,6 +52,11 @@
       text-decoration: none;
       color: var(--accent-color);
       font-size: 18px;
+    }
+
+    .navbar a.active {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 2px;
     }
 
     .theme-btn {
@@ -106,10 +112,20 @@
       line-height: 1.6;
     }
 
+    .social-links {
+      margin-top: 10px;
+    }
+
     .social-links a {
+      display: inline-block;
       text-decoration: none;
       color: var(--accent-color);
-      margin-right: 12px;
+      margin-right: 14px;
+      margin-bottom: 8px;
+    }
+
+    .social-links i {
+      margin-right: 6px;
     }
 
     .center {
@@ -118,14 +134,13 @@
   </style>
 </head>
 <body>
-<div class="navbar">
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-  <button class="theme-btn" onclick="toggleTheme()">🌗 Theme</button>
-</div>
-
+  <div class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <button class="theme-btn" onclick="toggleTheme()">🌗 Theme</button>
+  </div>
 
   <div class="card center">
     <img src="myphoto.jpeg" alt="Profile Picture" class="profile-pic" />
@@ -135,12 +150,12 @@
       I'm a passionate cybersecurity student focusing on Red Teaming and ethical hacking. Currently studying at the Faculty of Science, I’m building hands-on skills in Linux, penetration testing, and offensive security.
     </div>
     <div class="social-links">
-      <a href="https://github.com/SeifEldienAhmad" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/seifeldienahmad" target="_blank">LinkedIn</a>
-      <a href="mailto:seifeldienahmad@gmail.com" target="_blank">Email</a>
-      <a href="https://wa.me/201062642680" target="_blank">WhatsApp</a>
-      <a href="https://www.facebook.com/seifeldien.ahmad" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/seifeldien.ahmad" target="_blank">Instagram</a>
+      <a href="https://github.com/SeifEldienAhmad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/seifeldienahmad" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:seifeldienahmad@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://wa.me/201062642680" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://www.facebook.com/seifeldien.ahmad" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/seifeldien.ahmad" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
     </div>
   </div>
 
