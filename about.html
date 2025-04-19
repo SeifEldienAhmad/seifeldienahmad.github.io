@@ -3,37 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn more about Seif Eldien Ahmad Mohammad, a cybersecurity student with strong communication and presentation skills.">
-  <title>About Me - Seif Eldien Ahmad Mohammad</title>
+  <meta name="description" content="About Seif Eldien Ahmad Mohammad - background, skills, and cybersecurity expertise.">
+  <meta name="keywords" content="Seif Eldien Ahmad Mohammad, Cybersecurity Expert, InfoSec, Skills, About">
+  <title>About - Seif Eldien Ahmad Mohammad</title>
+
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --primary-color-light: #ffffff;
-      --secondary-color-light: #000000;
-      --accent-color: #2563eb;
-      --box-bg-light: #ffffff;
-
-      --primary-color-dark: #121212;
-      --secondary-color-dark: #ffffff;
-      --accent-color-dark: #2563eb;
-      --box-bg-dark: #1e1e1e;
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #82aaff;
+      --link-hover: #c3f0ff;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.5);
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      font-size: 22px;
-      background-color: var(--primary-color-dark);
-      color: var(--secondary-color-dark);
+      background-color: var(--bg-color);
+      color: var(--text-color);
       animation: fadeIn 1.2s ease-in-out;
       transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    [data-theme="light"] body {
-      background-color: var(--primary-color-light);
-      color: var(--secondary-color-light);
     }
 
     @keyframes fadeIn {
@@ -42,85 +35,136 @@
     }
 
     nav {
-      background-color: var(--box-bg-dark);
+      background-color: #1e1e1e;
       padding: 15px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 5px var(--shadow);
       position: relative;
-    }
-
-    [data-theme="light"] nav {
-      background-color: var(--box-bg-light);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     nav a {
       margin: 0 15px;
+      color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
-      color: var(--accent-color-dark);
+      transition: color 0.3s;
     }
 
-    [data-theme="light"] nav a {
-      color: var(--accent-color);
+    nav a:hover {
+      color: var(--link-hover);
     }
 
     nav a.active {
-      border-bottom: 3px solid var(--accent-color-dark);
-      padding-bottom: 4px;
+      color: #007BFF;
+      border-bottom: 2px solid #007BFF;
+    }
+
+    .toggle-theme {
+      position: absolute;
+      right: 20px;
+      top: 12px;
+      padding: 6px 12px;
+      border: 2px solid var(--link-color);
+      background: none;
+      color: var(--link-color);
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-theme:hover {
+      background-color: var(--link-color);
+      color: #000;
     }
 
     .container {
       max-width: 900px;
       margin: 40px auto;
       padding: 20px;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--shadow);
+    }
+
+    h1, h2 {
+      color: #fff;
+    }
+
+    p {
+      color: #cfcfcf;
       line-height: 1.8;
     }
 
-    .theme-btn {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-      padding: 6px 12px;
-      background-color: var(--accent-color-dark);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: bold;
+    ul {
+      padding-left: 20px;
     }
 
-    [data-theme="light"] .theme-btn {
-      background-color: var(--accent-color);
+    li {
+      margin-bottom: 10px;
     }
-
   </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
     <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <button class="theme-btn" onclick="toggleTheme()">🌗 Theme</button>
+    <a href="about.html" class="active">About</a>
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
   </nav>
 
   <div class="container">
     <h1>About Me</h1>
-    <p>
-      I'm Seif Eldien Ahmad Mohammad, a passionate cybersecurity student with a strong interest in Red Teaming and ethical hacking. With excellent communication and presentation skills, I'm currently exploring hands-on practices and real-world scenarios in information security.
-    </p>
-    <p>
-      I enjoy working on Linux environments, exploring vulnerabilities, and learning how to secure systems from threats. This website showcases my journey, projects, and insights into the world of cybersecurity.
-    </p>
+    <p>My name is Seif Eldien Ahmad Mohammad. I am passionate about cybersecurity, ethical hacking, and red teaming operations. I work on developing secure systems and educating others on how to protect themselves online.</p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>Penetration Testing & Red Teaming</li>
+      <li>Linux and Scripting (Bash, Python)</li>
+      <li>Web Application Security</li>
+      <li>Social Engineering Awareness</li>
+      <li>Network Analysis & Traffic Inspection</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Feel free to connect with me through:</p>
+    <div class="links" style="text-align: center;">
+      <a href="https://github.com/SeifeldienAhmad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/seifeldienahmad" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://twitter.com/SeifeldienAhmd" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
   </div>
 
   <script>
     function toggleTheme() {
       const html = document.documentElement;
-      const isDark = html.getAttribute("data-theme") === "dark";
-      html.setAttribute("data-theme", isDark ? "light" : "dark");
+      const currentTheme = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+      updateColors();
     }
+
+    function updateColors() {
+      const theme = document.documentElement.getAttribute("data-theme");
+      if (theme === "light") {
+        document.documentElement.style.setProperty('--bg-color', '#ffffff');
+        document.documentElement.style.setProperty('--text-color', '#000000');
+        document.documentElement.style.setProperty('--link-color', '#007BFF');
+        document.documentElement.style.setProperty('--link-hover', '#0056b3');
+        document.documentElement.style.setProperty('--card-bg', '#f0f0f0');
+        document.documentElement.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.2)');
+      } else {
+        document.documentElement.style.setProperty('--bg-color', '#121212');
+        document.documentElement.style.setProperty('--text-color', '#e0e0e0');
+        document.documentElement.style.setProperty('--link-color', '#82aaff');
+        document.documentElement.style.setProperty('--link-hover', '#c3f0ff');
+        document.documentElement.style.setProperty('--card-bg', '#1e1e1e');
+        document.documentElement.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.5)');
+      }
+    }
+
+    updateColors();
   </script>
+
 </body>
 </html>
