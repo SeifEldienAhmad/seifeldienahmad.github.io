@@ -1,172 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta name="google-site-verification" content="JK8g75XRkL-UuKcHhBKxU22R5Ezc2uvmsA81oa9SiBE" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="The official personal website of Seif Eldien Ahmad Mohammad. Learn more about his work in cybersecurity, red teaming, and ethical hacking.">
   <meta name="keywords" content="Seif Eldien Ahmad Mohammad, Red Teaming, Cybersecurity, Ethical Hacker, InfoSec">
-  <title>Seif Eldien Ahmad Mohammad | Official Personal Website</title>
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <title>Seif Eldien Ahmad Mohammad</title>
   <style>
     :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --link-color: #82aaff;
-      --link-hover: #c3f0ff;
-      --card-bg: #1e1e1e;
-      --shadow: rgba(0, 0, 0, 0.5);
+      --primary-color-light: #ffffff;
+      --secondary-color-light: #000000;
+      --accent-color: #2563eb;
+      --box-bg-light: #ffffff;
+      --box-shadow-light: rgba(0, 0, 0, 0.1);
+
+      --primary-color-dark: #121212;
+      --secondary-color-dark: #ffffff;
+      --box-bg-dark: #1f1f1f;
+      --box-shadow-dark: rgba(255, 255, 255, 0.05);
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      animation: fadeIn 1.2s ease-in-out;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 0;
+      font-family: sans-serif;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
+    [data-theme="light"] {
+      background-color: var(--primary-color-light);
+      color: var(--secondary-color-light);
     }
 
-    nav {
-      background-color: #1e1e1e;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 5px var(--shadow);
-      position: relative;
+    [data-theme="dark"] {
+      background-color: var(--primary-color-dark);
+      color: var(--secondary-color-dark);
     }
 
-    nav a {
-      margin: 0 15px;
-      color: var(--link-color);
-      text-decoration: none;
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      gap: 40px;
       font-weight: bold;
-      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: var(--link-hover);
+    .navbar a {
+      text-decoration: none;
+      color: var(--accent-color);
+      font-size: 18px;
     }
 
-    .toggle-theme {
+    .theme-btn {
       position: absolute;
       right: 20px;
-      top: 12px;
+      top: 20px;
       padding: 6px 12px;
-      border: 2px solid var(--link-color);
-      background: none;
-      color: var(--link-color);
-      font-weight: bold;
-      border-radius: 8px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 12px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      font-weight: bold;
     }
 
-    .toggle-theme:hover {
-      background-color: var(--link-color);
-      color: #000;
+    .card {
+      max-width: 800px;
+      margin: 60px auto;
+      background-color: var(--box-bg-dark);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 6px 16px var(--box-shadow-dark);
+      transition: background-color 0.3s;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 0 10px var(--shadow);
+    [data-theme="light"] .card {
+      background-color: var(--box-bg-light);
+      box-shadow: 0 6px 16px var(--box-shadow-light);
     }
 
-    h1, h2 {
-      color: #fff;
-    }
-
-    p {
-      color: #cfcfcf;
-      line-height: 1.8;
-    }
-
-    .profile-pic img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
+    .profile-pic {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      border: 3px solid #82aaff;
+      object-fit: cover;
+      margin-bottom: 24px;
     }
 
-    .links a {
-      display: inline-block;
-      margin: 10px 15px 0 0;
-      color: var(--link-color);
+    .name {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-weight: bold;
+      color: var(--accent-color);
+      margin: 14px 0;
+    }
+
+    .bio {
+      font-size: 17px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .social-links a {
       text-decoration: none;
+      color: var(--accent-color);
+      margin-right: 12px;
     }
 
-    .links a:hover {
-      color: var(--link-hover);
+    .center {
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <button class="toggle-theme" onclick="toggleTheme()">🌓 Theme</button>
-  </nav>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+    <button class="theme-btn" onclick="toggleTheme()">🌗 Theme</button>
+  </div>
 
-  <div class="container">
-    <div class="profile-pic">
-      <img src="myphoto.jpeg" alt="Seif Eldien Ahmad Mohammad">
+  <div class="card center">
+    <img src="myphoto.jpeg" alt="Profile Picture" class="profile-pic" />
+    <div class="name">Seif Eldien Ahmad Mohammad</div>
+    <div class="subtitle">Cybersecurity & Red Teaming Enthusiast</div>
+    <div class="bio">
+      I'm a passionate cybersecurity student focusing on Red Teaming and ethical hacking. Currently studying at the Faculty of Science, I’m building hands-on skills in Linux, penetration testing, and offensive security.
     </div>
-    <h1>Seif Eldien Ahmad Mohammad</h1>
-    <p><strong>Cybersecurity & Red Teaming Enthusiast</strong></p>
-    <p>I’m a passionate cybersecurity student focusing on Red Teaming and ethical hacking. Currently studying at the Faculty of Science, I’m building hands-on skills in Linux, penetration testing, and offensive security.</p>
-    <div class="links">
-      <a href="https://github.com/SeifEldeinAhmad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/seif-ahmed-2263362bb" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://wa.me/201008005482" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="https://www.facebook.com/share/1C18YF8pTm/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-      <a href="https://www.instagram.com/se.if0._1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <div class="social-links">
+      <a href="https://github.com/SeifEldienAhmad" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/seifeldienahmad" target="_blank">LinkedIn</a>
+      <a href="mailto:seifeldienahmad@gmail.com" target="_blank">Email</a>
+      <a href="https://wa.me/201062642680" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/seifeldien.ahmad" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/seifeldien.ahmad" target="_blank">Instagram</a>
     </div>
   </div>
 
   <script>
     function toggleTheme() {
-      const root = document.documentElement;
-      const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
-      const isDark = currentBg === '#121212';
-
-      if (isDark) {
-        root.style.setProperty('--bg-color', '#f9f9f9');
-        root.style.setProperty('--card-bg', '#ffffff');
-        root.style.setProperty('--text-color', '#111');
-        root.style.setProperty('--link-color', '#3366cc');
-        root.style.setProperty('--link-hover', '#1a53b0');
-        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.2)');
-        localStorage.setItem('theme', 'light');
-      } else {
-        root.style.setProperty('--bg-color', '#121212');
-        root.style.setProperty('--card-bg', '#1e1e1e');
-        root.style.setProperty('--text-color', '#e0e0e0');
-        root.style.setProperty('--link-color', '#82aaff');
-        root.style.setProperty('--link-hover', '#c3f0ff');
-        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.5)');
-        localStorage.setItem('theme', 'dark');
-      }
+      const htmlTag = document.documentElement;
+      const isDark = htmlTag.getAttribute("data-theme") === "dark";
+      htmlTag.setAttribute("data-theme", isDark ? "light" : "dark");
     }
-
-    window.onload = () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') toggleTheme();
-    };
   </script>
 </body>
 </html>
