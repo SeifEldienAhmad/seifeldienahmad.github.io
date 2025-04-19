@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn more about Seif Eldein Ahmad Mohammad, a cybersecurity student with strong communication and presentation skills.">
-  <title>About Me - Seif Eldein Ahmad Mohammad</title>
-
-  <!-- Font Awesome Icons -->
+  <meta name="description" content="Learn more about Seif Eldien Ahmad Mohammad, a cybersecurity student with strong communication and presentation skills.">
+  <title>About Me - Seif Eldien Ahmad Mohammad</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --link-color: #82aaff;
-      --link-hover: #c3f0ff;
-      --card-bg: #1e1e1e;
-      --shadow: rgba(0, 0, 0, 0.5);
+      --primary-color-light: #ffffff;
+      --secondary-color-light: #000000;
+      --accent-color: #2563eb;
+      --box-bg-light: #ffffff;
+
+      --primary-color-dark: #121212;
+      --secondary-color-dark: #ffffff;
+      --accent-color-dark: #2563eb;
+      --box-bg-dark: #1e1e1e;
     }
 
     body {
-      font-family: 'Caveat', cursive;
+      font-family: sans-serif;
       margin: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      padding: 0;
       font-size: 22px;
+      background-color: var(--primary-color-dark);
+      color: var(--secondary-color-dark);
       animation: fadeIn 1.2s ease-in-out;
       transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    [data-theme="light"] body {
+      background-color: var(--primary-color-light);
+      color: var(--secondary-color-light);
     }
 
     @keyframes fadeIn {
@@ -36,151 +42,85 @@
     }
 
     nav {
-      background-color: #1e1e1e;
+      background-color: var(--box-bg-dark);
       padding: 15px;
       text-align: center;
-      box-shadow: 0 2px 5px var(--shadow);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
       position: relative;
+    }
+
+    [data-theme="light"] nav {
+      background-color: var(--box-bg-light);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     nav a {
       margin: 0 15px;
-      color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      color: var(--accent-color-dark);
     }
 
-    nav a:hover {
-      color: var(--link-hover);
+    [data-theme="light"] nav a {
+      color: var(--accent-color);
     }
 
-    .toggle-theme {
-      position: absolute;
-      right: 20px;
-      top: 12px;
-      padding: 6px 12px;
-      border: 2px solid var(--link-color);
-      background: none;
-      color: var(--link-color);
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .toggle-theme:hover {
-      background-color: var(--link-color);
-      color: #000;
+    nav a.active {
+      border-bottom: 3px solid var(--accent-color-dark);
+      padding-bottom: 4px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
-      background-color: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 0 10px var(--shadow);
+      line-height: 1.8;
     }
 
-    h1, h2 {
-      color: #fff;
+    .theme-btn {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      padding: 6px 12px;
+      background-color: var(--accent-color-dark);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
     }
 
-    ul {
-      padding-left: 20px;
+    [data-theme="light"] .theme-btn {
+      background-color: var(--accent-color);
     }
 
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    p {
-      color: #cfcfcf;
-    }
-
-    .social a {
-      font-size: 24px;
-      margin-right: 15px;
-      text-decoration: none;
-      color: var(--link-color);
-    }
-
-    .social a:hover {
-      color: var(--link-hover);
-    }
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
-    <button class="toggle-theme" onclick="toggleTheme()">🌓 Theme</button>
+    <button class="theme-btn" onclick="toggleTheme()">🌗 Theme</button>
   </nav>
 
   <div class="container">
     <h1>About Me</h1>
-    <p>Hi, I'm <strong>Seif Eldein Ahmad Mohammad</strong>.</p>
-
-    <h2>Personal Information</h2>
-    <ul>
-      <li><strong>Date of Birth:</strong> October 1, 2005</li>
-      <li><strong>Education:</strong> Student at the Faculty of Science</li>
-      <li><strong>Field:</strong> Passionate about Cybersecurity and Red Teaming</li>
-    </ul>
-
-    <h2>Skills</h2>
-    <ul>
-      <li>Writing</li>
-      <li>Presentation skills</li>
-      <li>Communication</li>
-    </ul>
-
-    <p>I’m a member of the presentation team at <strong>Enactus Fayoum</strong> for both the 2023-2024 and 2024-2025 seasons.</p>
-
-    <h2>Find Me On</h2>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/seif-ahmed-2263362bb" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/SeifEldeinAhmad" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://wa.me/201008005482" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/se.if0._1" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/share/1C18YF8pTm/" target="_blank"><i class="fab fa-facebook"></i></a>
-    </div>
+    <p>
+      I'm Seif Eldien Ahmad Mohammad, a passionate cybersecurity student with a strong interest in Red Teaming and ethical hacking. With excellent communication and presentation skills, I'm currently exploring hands-on practices and real-world scenarios in information security.
+    </p>
+    <p>
+      I enjoy working on Linux environments, exploring vulnerabilities, and learning how to secure systems from threats. This website showcases my journey, projects, and insights into the world of cybersecurity.
+    </p>
   </div>
 
   <script>
     function toggleTheme() {
-      const root = document.documentElement;
-      const currentBg = getComputedStyle(root).getPropertyValue('--bg-color').trim();
-      const isDark = currentBg === '#121212';
-
-      if (isDark) {
-        root.style.setProperty('--bg-color', '#f9f9f9');
-        root.style.setProperty('--card-bg', '#ffffff');
-        root.style.setProperty('--text-color', '#111');
-        root.style.setProperty('--link-color', '#3366cc');
-        root.style.setProperty('--link-hover', '#1a53b0');
-        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.2)');
-        localStorage.setItem('theme', 'light');
-      } else {
-        root.style.setProperty('--bg-color', '#121212');
-        root.style.setProperty('--card-bg', '#1e1e1e');
-        root.style.setProperty('--text-color', '#e0e0e0');
-        root.style.setProperty('--link-color', '#82aaff');
-        root.style.setProperty('--link-hover', '#c3f0ff');
-        root.style.setProperty('--shadow', 'rgba(0, 0, 0, 0.5)');
-        localStorage.setItem('theme', 'dark');
-      }
+      const html = document.documentElement;
+      const isDark = html.getAttribute("data-theme") === "dark";
+      html.setAttribute("data-theme", isDark ? "light" : "dark");
     }
-
-    window.onload = () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') toggleTheme();
-    };
   </script>
 </body>
 </html>
