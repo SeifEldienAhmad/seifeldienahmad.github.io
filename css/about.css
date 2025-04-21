@@ -67,7 +67,6 @@ nav a:hover {
   background-color: var(--link-color);
   color: #000;
 }
-
 .container {
   max-width: 800px;
   margin: 50px auto;
