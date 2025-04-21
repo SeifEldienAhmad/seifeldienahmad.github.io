@@ -7,7 +7,12 @@
   --shadow: rgba(0, 0, 0, 0.5);
   --input-bg: #1c1c1c;
   --input-text: #e0e0e0;
+  --hover-bg: #333;
+  --hover-color: #fff;
+  --active-bg: #82aaff;
+  --active-color: #121212;
 }
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
