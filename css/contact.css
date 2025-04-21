@@ -7,6 +7,10 @@
   --shadow: rgba(0, 0, 0, 0.5);
   --input-bg: #1c1c1c;
   --input-text: #e0e0e0;
+  --hover-bg: #333;
+  --hover-color: #fff;
+  --active-bg: #82aaff;
+  --active-color: #121212;
 }
 
 body {
@@ -27,41 +31,45 @@ body {
 nav {
   background-color: var(--bg-color);
   padding: 15px;
-  text-align: center;
   box-shadow: 0 2px 5px var(--shadow);
   position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 nav a {
-  margin: 0 15px;
   color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a.active {
-  color: var(--bg-color);
-  background-color: var(--link-color);
-  border-radius: 5px;
-  padding: 6px 10px;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-  color: var(--link-hover);
+  background-color: var(--hover-bg);
+  color: var(--hover-color);
+}
+
+nav a.active {
+  background-color: var(--active-bg);
+  color: var(--active-color);
 }
 
 .toggle-theme {
   position: absolute;
   right: 20px;
-  top: 12px;
-  padding: 6px 12px;
-  border: 2px solid var(--link-color);
+  top: 20px;
   background: none;
+  border: 2px solid var(--link-color);
   color: var(--link-color);
-  font-weight: bold;
+  padding: 5px 10px;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
@@ -71,28 +79,17 @@ nav a:hover {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 50px auto;
   padding: 30px;
   background-color: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 0 15px var(--shadow);
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: nowrap;
-}
-
-.container > div,
-form {
-  flex: 1;
-  min-width: 250px;
 }
 
 h1, h2 {
   color: var(--text-color);
+  text-align: center;
 }
 
 .contact-info a {
@@ -137,6 +134,7 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
@@ -144,44 +142,24 @@ button:hover {
   color: #000;
 }
 
-/* Responsive: تصغير العناصر فقط على الموبايل */
+/* Responsive navbar */
 @media (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-
-  .container {
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .container > div,
-  form {
-    min-width: 150px;
+  nav {
+    gap: 8px;
   }
 
   nav a {
     font-size: 14px;
-    padding: 5px 8px;
+    padding: 6px 10px;
+    margin: 2px;
   }
 
   .toggle-theme {
     font-size: 13px;
     padding: 5px 8px;
-  }
-
-  .contact-info a {
-    font-size: 16px;
-  }
-
-  input,
-  textarea {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 8px 20px;
+    top: auto;
+    right: auto;
+    margin-top: 8px;
+    position: relative;
   }
 }
