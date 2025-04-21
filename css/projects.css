@@ -212,3 +212,26 @@ h1 {
 #disqus_thread {
   margin-top: 60px;
 }
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+    margin: 2px;
+  }
+
+  .toggle-dark {
+    font-size: 13px;
+    padding: 5px 8px;
+    margin-top: 8px;
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}
+
