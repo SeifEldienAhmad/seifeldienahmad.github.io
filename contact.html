@@ -1,164 +1,47 @@
-:root {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --link-color: #82aaff;
-  --link-hover: #c3f0ff;
-  --card-bg: #1e1e1e;
-  --shadow: rgba(0, 0, 0, 0.5);
-  --input-bg: #1c1c1c;
-  --input-text: #e0e0e0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact Seif Eldien Ahmad Mohammad via email, LinkedIn, or WhatsApp. Send a message directly.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Contact Me - Seif Eldien Ahmad Mohammad</title>
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  animation: fadeIn 1.2s ease-in-out;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style/contact.css" />
+</head>
+<body>
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <button class="toggle-theme" onclick="toggleTheme()">🌓 Theme</button>
 
-nav {
-  background-color: var(--bg-color);
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 2px 5px var(--shadow);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>You can reach me directly via:</p>
 
-nav a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
-}
+    <div class="contact-info">
+      <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> seifahmed7293@gmail.com</a>
+      <a href="https://www.linkedin.com/in/seif-ahmed-2263362bb" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://wa.me/201008005482" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
 
-nav a.active {
-  background-color: var(--link-color);
-  color: var(--bg-color);
-}
+    <h2>Or send me a message</h2>
+    <form action="https://formspree.io/f/xqapvqda" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
 
-nav a:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-.toggle-theme {
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  padding: 6px 12px;
-  border: 2px solid var(--link-color);
-  background: none;
-  color: var(--link-color);
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.toggle-theme:hover {
-  background-color: var(--link-color);
-  color: #000;
-}
-
-.container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: var(--card-bg);
-  border-radius: 12px;
-  box-shadow: 0 0 15px var(--shadow);
-}
-
-h1, h2 {
-  color: var(--text-color);
-}
-
-.contact-info a {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--link-color);
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.contact-info a:hover {
-  color: var(--link-hover);
-}
-
-form {
-  margin-top: 20px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 5px;
-  border: 1px solid #444;
-  background-color: var(--input-bg);
-  color: var(--input-text);
-  font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #999;
-}
-
-button {
-  background-color: var(--link-color);
-  color: white;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--link-hover);
-  color: #000;
-}
-
-/* Responsive for Mobile */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .toggle-theme {
-    font-size: 14px;
-    padding: 5px 10px;
-    position: relative;
-    right: auto;
-    top: auto;
-    margin-top: 10px;
-  }
-
-  .container {
-    margin: 20px 10px;
-    padding: 20px;
-  }
-}
+  <!-- Theme Toggle Script -->
+  <script src="js/theme-toggle.js"></script>
+</body>
+</html>
