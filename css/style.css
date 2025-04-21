@@ -103,3 +103,22 @@
     .links a:hover {
       color: var(--link-hover);
     }
+/* Responsive Navbar for Mobile */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .toggle-dark {
+    margin-top: 10px;
+  }
+}
