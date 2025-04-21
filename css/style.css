@@ -1,0 +1,105 @@
+:root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #82aaff;
+      --link-hover: #c3f0ff;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      animation: fadeIn 1.2s ease-in-out;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      background-color: var(--bg-color);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px var(--shadow);
+      position: relative;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a.active {
+      color: var(--bg-color);
+      background-color: var(--link-color);
+      border-radius: 5px;
+      padding: 6px 10px;
+    }
+
+    nav a:hover {
+      color: var(--link-hover);
+    }
+
+    .toggle-theme {
+      position: absolute;
+      right: 20px;
+      top: 12px;
+      padding: 6px 12px;
+      border: 2px solid var(--link-color);
+      background: none;
+      color: var(--link-color);
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-theme:hover {
+      background-color: var(--link-color);
+      color: #000;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--shadow);
+    }
+
+    h1, h2 {
+      color: var(--text-color);
+    }
+
+    p {
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+
+    .profile-pic img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #82aaff;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px 15px 0 0;
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      color: var(--link-hover);
+    }
