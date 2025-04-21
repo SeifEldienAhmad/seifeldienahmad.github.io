@@ -28,30 +28,25 @@ nav {
   text-align: center;
   box-shadow: 0 2px 5px var(--shadow);
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 nav a {
+  margin: 0 15px;
   color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.3s;
 }
 
 nav a.active {
-  background-color: var(--link-color);
   color: var(--bg-color);
+  background-color: var(--link-color);
+  border-radius: 5px;
+  padding: 6px 10px;
 }
 
 nav a:hover {
-  background-color: #333;
-  color: #fff;
+  color: var(--link-hover);
 }
 
 .toggle-theme {
@@ -109,35 +104,21 @@ p {
   color: var(--link-hover);
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .toggle-theme {
-    font-size: 14px;
-    padding: 5px 10px;
-    position: relative;
-    right: auto;
-    top: auto;
-    margin-top: 10px;
-  }
-
+/* ✅ Media Query for horizontal layout */
+@media (min-width: 601px) {
   .container {
-    margin: 20px 10px;
-    padding: 15px;
-    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
-  .social a {
-    font-size: 20px;
-    margin: 8px;
+  .container > div {
+    flex: 1;
+  }
+
+  .social {
+    margin-top: 0;
   }
 }
