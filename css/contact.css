@@ -7,10 +7,6 @@
   --shadow: rgba(0, 0, 0, 0.5);
   --input-bg: #1c1c1c;
   --input-text: #e0e0e0;
-  --hover-bg: #333;
-  --hover-color: #fff;
-  --active-bg: #82aaff;
-  --active-color: #121212;
 }
 
 body {
@@ -31,45 +27,41 @@ body {
 nav {
   background-color: var(--bg-color);
   padding: 15px;
+  text-align: center;
   box-shadow: 0 2px 5px var(--shadow);
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 nav a {
+  margin: 0 15px;
   color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-  background-color: var(--hover-bg);
-  color: var(--hover-color);
+  transition: color 0.3s;
 }
 
 nav a.active {
-  background-color: var(--active-bg);
-  color: var(--active-color);
+  color: var(--bg-color);
+  background-color: var(--link-color);
+  border-radius: 5px;
+  padding: 6px 10px;
+}
+
+nav a:hover {
+  color: var(--link-hover);
 }
 
 .toggle-theme {
   position: absolute;
   right: 20px;
-  top: 20px;
-  background: none;
+  top: 12px;
+  padding: 6px 12px;
   border: 2px solid var(--link-color);
+  background: none;
   color: var(--link-color);
-  padding: 5px 10px;
+  font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
   transition: all 0.3s ease;
 }
 
@@ -85,16 +77,24 @@ nav a.active {
   background-color: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 0 15px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
 }
 
 h1, h2 {
   color: var(--text-color);
-  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .contact-info a {
-  display: block;
-  margin-bottom: 10px;
   color: var(--link-color);
   text-decoration: none;
   font-size: 18px;
@@ -105,14 +105,14 @@ h1, h2 {
 }
 
 form {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 12px;
   border-radius: 5px;
   border: 1px solid #444;
   background-color: var(--input-bg);
@@ -134,32 +134,9 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
   background-color: var(--link-hover);
   color: #000;
-}
-
-/* Responsive navbar */
-@media (max-width: 600px) {
-  nav {
-    gap: 8px;
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 6px 10px;
-    margin: 2px;
-  }
-
-  .toggle-theme {
-    font-size: 13px;
-    padding: 5px 8px;
-    top: auto;
-    right: auto;
-    margin-top: 8px;
-    position: relative;
-  }
 }
