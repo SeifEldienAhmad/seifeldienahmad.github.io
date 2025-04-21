@@ -4,8 +4,8 @@
   --text-color: #e0e0e0;
   --accent-color: #82aaff;
   --slide-bg: #2b2b2b;
-  ---link-color: #82aaff;
-   --link-hover: #c3f0ff;
+  --link-color: #82aaff;
+  --link-hover: #c3f0ff;
   --shadow: rgba(0, 0, 0, 0.5);
   --hover-bg: #333;
   --hover-color: #fff;
@@ -120,6 +120,7 @@ h1 {
   padding: 15px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .project-slide:hover {
@@ -144,11 +145,13 @@ h1 {
 .project-slide h3 {
   color: var(--accent-color);
   font-size: 1.1em;
+  margin-top: 10px;
 }
 
 .project-slide p {
   font-size: 0.95em;
   margin: 10px 0;
+  color: var(--text-color);
 }
 
 .project-slide a {
@@ -160,6 +163,11 @@ h1 {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-slide a:hover {
+  background-color: var(--link-hover);
 }
 
 /* Arrows */
