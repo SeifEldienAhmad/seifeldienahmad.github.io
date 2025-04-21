@@ -30,30 +30,25 @@ nav {
   text-align: center;
   box-shadow: 0 2px 5px var(--shadow);
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 nav a {
+  margin: 0 15px;
   color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.3s;
 }
 
 nav a.active {
-  background-color: var(--link-color);
   color: var(--bg-color);
+  background-color: var(--link-color);
+  border-radius: 5px;
+  padding: 6px 10px;
 }
 
 nav a:hover {
-  background-color: #333;
-  color: #fff;
+  color: var(--link-hover);
 }
 
 .toggle-theme {
@@ -76,12 +71,24 @@ nav a:hover {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 50px auto;
   padding: 30px;
   background-color: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 0 15px var(--shadow);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.container > div,
+form {
+  flex: 1;
+  min-width: 250px;
 }
 
 h1, h2 {
@@ -104,7 +111,8 @@ form {
   margin-top: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 12px;
@@ -136,29 +144,44 @@ button:hover {
   color: #000;
 }
 
-/* Responsive for Mobile */
+/* Responsive: تصغير العناصر فقط على الموبايل */
 @media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .container > div,
+  form {
+    min-width: 150px;
   }
 
   nav a {
     font-size: 14px;
-    padding: 8px 12px;
+    padding: 5px 8px;
   }
 
   .toggle-theme {
-    font-size: 14px;
-    padding: 5px 10px;
-    position: relative;
-    right: auto;
-    top: auto;
-    margin-top: 10px;
+    font-size: 13px;
+    padding: 5px 8px;
   }
 
-  .container {
-    margin: 20px 10px;
-    padding: 20px;
+  .contact-info a {
+    font-size: 16px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 20px;
   }
 }
