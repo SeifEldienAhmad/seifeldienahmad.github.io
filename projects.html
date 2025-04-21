@@ -23,7 +23,10 @@
     <div class="project-card">
       <h2>My Projects</h2>
       <div class="slider-container">
-        <button class="arrow arrow-left" onclick="slide(-1)">&#8249;</button>
+        <!-- السهم اليسار -->
+        <button class="arrow arrow-left" onclick="slide('slider', -1)">&#8249;</button>
+
+        <!-- سلايدر المشاريع -->
         <div class="slider-wrapper" id="slider">
           <div class="project-slide">
             <img src="images/linux_cheatsheet_dragon.png" alt="Linux Cheatsheet Dragon Logo">
@@ -39,15 +42,19 @@
             <a href="https://github.com/SeifEldienAhmad/Cybersecurity-Startup-at-Fayoum-Egypt/" target="_blank">View Plan</a>
           </div>
         </div>
-        <button class="arrow arrow-right" onclick="slide(1)">&#8250;</button>
+
+        <!-- السهم اليمين -->
+        <button class="arrow arrow-right" onclick="slide('slider', 1)">&#8250;</button>
       </div>
     </div>
 
+    <!-- نافذة عرض الصور -->
     <div id="imgModal" class="modal" onclick="closeModal()">
       <span class="close">&times;</span>
       <img class="modal-content" id="modalImg">
     </div>
 
+    <!-- قسم التعليقات -->
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
@@ -63,6 +70,8 @@
     </script>
   </main>
 
+  <!-- سكريبتات الجافاسكريبت -->
   <script src="js/slider.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
