@@ -1,18 +1,22 @@
-let currentIndex = 0;
-
-function slide(direction) {
-  const slider = document.getElementById('slider');
+// تحريك السلايدر لأي عنصر بالمعرف (id)
+function slide(sliderId, direction) {
+  const slider = document.getElementById(sliderId);
   const slides = slider.children.length;
   const slideWidth = 270; // عرض كل كارت + الهامش
 
-  currentIndex += direction;
+  // تخزين الـ index لكل سلايدر على حدة
+  if (!slide.indices) slide.indices = {};
+  if (!(sliderId in slide.indices)) slide.indices[sliderId] = 0;
 
-  if (currentIndex < 0) currentIndex = slides - 1;
-  if (currentIndex >= slides) currentIndex = 0;
+  slide.indices[sliderId] += direction;
 
-  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  if (slide.indices[sliderId] < 0) slide.indices[sliderId] = slides - 1;
+  if (slide.indices[sliderId] >= slides) slide.indices[sliderId] = 0;
+
+  slider.style.transform = `translateX(-${slide.indices[sliderId] * slideWidth}px)`;
 }
 
+// تطبيق الثيم حسب الوضع الحالي
 function applyTheme(theme) {
   const root = document.documentElement;
 
@@ -37,22 +41,26 @@ function applyTheme(theme) {
   }
 }
 
-function toggleDarkMode() {
+// دالة التبديل بين الثيمات (هي اللي بتناديها الزرار)
+function toggleTheme() {
   const currentTheme = localStorage.getItem('theme') || 'dark';
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
   applyTheme(newTheme);
   localStorage.setItem('theme', newTheme);
 }
 
+// إغلاق نافذة عرض الصورة (المودال)
 function closeModal() {
   document.getElementById('imgModal').style.display = "none";
 }
 
+// تفعيل عند تحميل الصفحة
 window.onload = () => {
+  // تحميل الثيم المحفوظ
   const savedTheme = localStorage.getItem('theme') || 'dark';
   applyTheme(savedTheme);
 
-  // تفعيل المودال عند الضغط على أي صورة
+  // تفعيل عرض الصورة في المودال
   document.querySelectorAll('.project-slide img').forEach(img => {
     img.addEventListener('click', () => {
       const modal = document.getElementById('imgModal');
