@@ -5,8 +5,11 @@
   --link-hover: #c3f0ff;
   --card-bg: #1e1e1e;
   --shadow: rgba(0, 0, 0, 0.5);
+  --hover-bg: #333;
+  --hover-color: #fff;
+  --active-bg: #82aaff;
+  --active-color: #121212;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
