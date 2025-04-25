@@ -138,7 +138,7 @@ input, textarea {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #444;
-  background-color: var(--input-bg);
+  background-color: var(--bg-color);
   color: var(--input-text);
   font-size: 16px;
   transition: background-color 0.3s ease, color 0.3s ease;
