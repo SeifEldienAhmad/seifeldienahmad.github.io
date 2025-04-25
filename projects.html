@@ -55,19 +55,46 @@
     </div>
 
     <!-- قسم التعليقات -->
-    <div id="disqus_thread"></div>
-    <script>
-      var disqus_config = function () {
-        this.page.url = 'https://seifeldienahmad.github.io/projects.html';
-        this.page.identifier = 'projects';
-      };
-      (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://seifeldein-blog.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
+   <!-- مكان عرض ديسكس -->
+<div id="disqus_thread"></div>
+
+<!-- سكريبت ديسكس مع دعم الثيم -->
+<script>
+  // تعريف disqus_config مع دعم الوضع الليلي والنهاري
+  var disqus_config = function () {
+    this.page.url = 'https://seifeldienahmad.github.io/projects.html';  // رابط صفحتك
+    this.page.identifier = 'projects';                                  // معرف الصفحة
+    this.page.theme = (localStorage.getItem('theme') === 'dark') ? 'dark' : 'light';  // تحديد الثيم حسب التخزين المحلي
+  };
+
+  // تحميل ديسكس أول مرة
+  (function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://seifeldein-blog.disqus.com/embed.js';  // رابط السكريبت الخاص بمدونتك
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+  // فانكشن لإعادة تحميل ديسكس عند تغيير الثيم
+  function reloadDisqus() {
+    var disqusThread = document.getElementById('disqus_thread');
+    if (disqusThread) {
+      disqusThread.innerHTML = ''; // حذف المحتوى الحالي
+    }
+
+    var d = document, s = d.createElement('script');
+    // نعيد تعريف disqus_config لتحديث الثيم
+    disqus_config = function () {
+      this.page.url = 'https://seifeldienahmad.github.io/projects.html';
+      this.page.identifier = 'projects';
+      this.page.theme = (localStorage.getItem('theme') === 'dark') ? 'dark' : 'light';
+    };
+
+    s.src = 'https://seifeldein-blog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+</script>
   </main>
 
   <!-- سكريبتات الجافاسكريبت -->
