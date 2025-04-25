@@ -96,14 +96,16 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-ul, strong {
+ul {
   list-style: disc;
   color: var(--text-color);
   padding-left: 20px;
 }
 
 strong {
-  color: #fff;
+  list-style: disc;
+  color: var(--text-color);
+  padding-left: 20px;
 }
 
 a {
