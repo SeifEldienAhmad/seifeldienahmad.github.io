@@ -22,10 +22,12 @@ function applyTheme(theme) {
     const currentTheme = localStorage.getItem('theme') || 'dark';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     applyTheme(newTheme);
+    reloadDisqus();
     localStorage.setItem('theme', newTheme);
   }
 
   window.onload = () => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     applyTheme(savedTheme);
+      reloadDisqus();
   };
