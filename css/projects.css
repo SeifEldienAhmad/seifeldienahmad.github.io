@@ -249,6 +249,7 @@ h1 {
 
 #disqus_thread {
   margin-top: 60px;
+  color: var(--text-color);
 }
 
 /* Mobile Responsive */
