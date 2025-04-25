@@ -11,8 +11,24 @@
   --hover-color: #fff;
   --active-bg: #82aaff;
   --active-color: #121212;
+  --accent-color: #82aaff;
 }
 
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #121212;
+  --link-color: #005fdd;
+  --link-hover: #0033aa;
+  --card-bg: #f4f4f4;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
+  --input-text: #121212;
+  --hover-bg: #ddd;
+  --hover-color: #000;
+  --active-bg: #005fdd;
+  --active-color: #ffffff;
+  --accent-color: #005fdd;
+}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -76,6 +92,7 @@ nav a.active {
   background-color: var(--link-color);
   color: #000;
 }
+
 .container {
   max-width: 800px;
   margin: 50px auto;
@@ -133,18 +150,19 @@ textarea::placeholder {
 }
 
 button {
-  background-color: var(--link-color);
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--active-color);
   padding: 10px 25px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
   background-color: var(--link-hover);
-  color: #000;
+  color: var(--bg-color);
 }
 
 @media (max-width: 600px) {
