@@ -247,6 +247,7 @@ h1 {
   cursor: pointer;
 }
 
+/* Comments Section */
 #disqus_thread {
   margin-top: 60px;
   color: var(--input-text);
