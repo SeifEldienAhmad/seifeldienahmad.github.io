@@ -23,20 +23,6 @@ function slide(sliderId, direction) {
   updateIndicators(sliderId); // تحديث المؤشرات
 }
 
-// إضافة دعم للتحريك التلقائي (اختياري)
-function autoSlide(sliderId, interval = 3000) {
-  setInterval(() => {
-    slide(sliderId, 1);
-  }, interval);
-}
-
-// تفعيل التحريك التلقائي على سلايدر المشاريع
-document.addEventListener("DOMContentLoaded", function() {
-  autoSlide("slider", 5000); // 5 ثواني بين كل حركة
-  createIndicators("slider"); // إنشاء المؤشرات للسلايدر
-});
-
-// إنشاء المؤشرات الديناميكية للسلايدر
 function createIndicators(sliderId) {
   const slider = document.getElementById(sliderId);
   const slides = slider.querySelectorAll('.project-slide');
