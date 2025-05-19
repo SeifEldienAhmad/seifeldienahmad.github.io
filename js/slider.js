@@ -1,8 +1,8 @@
 // تحريك السلايدر لأي عنصر حسب الـ ID
 function slide(sliderId, direction) {
   const slider = document.getElementById(sliderId);
-  const slides = slider.children.length;
-  const slideWidth = 270; // عرض الكارت + أي هامش يمين/يسار
+  const slides = slider.querySelectorAll('.project-slide');
+  const slideWidth = slides[0].offsetWidth + 20; // عرض الكارت + الهامش الجانبي
 
   // تخزين مؤشر لكل سلايدر بشكل منفصل
   if (!slide.indices) slide.indices = {};
@@ -13,11 +13,64 @@ function slide(sliderId, direction) {
 
   // التعامل مع الحواف (loop)
   if (slide.indices[sliderId] < 0) {
-    slide.indices[sliderId] = slides - 1;
-  } else if (slide.indices[sliderId] >= slides) {
+    slide.indices[sliderId] = slides.length - 1;
+  } else if (slide.indices[sliderId] >= slides.length) {
     slide.indices[sliderId] = 0;
   }
 
   // تحريك السلايدر
   slider.style.transform = `translateX(-${slide.indices[sliderId] * slideWidth}px)`;
+  updateIndicators(sliderId); // تحديث المؤشرات
+}
+
+// إضافة دعم للتحريك التلقائي (اختياري)
+function autoSlide(sliderId, interval = 3000) {
+  setInterval(() => {
+    slide(sliderId, 1);
+  }, interval);
+}
+
+// تفعيل التحريك التلقائي على سلايدر المشاريع
+document.addEventListener("DOMContentLoaded", function() {
+  autoSlide("slider", 5000); // 5 ثواني بين كل حركة
+  createIndicators("slider"); // إنشاء المؤشرات للسلايدر
+});
+
+// إنشاء المؤشرات الديناميكية للسلايدر
+function createIndicators(sliderId) {
+  const slider = document.getElementById(sliderId);
+  const slides = slider.querySelectorAll('.project-slide');
+  const indicatorsContainer = document.createElement('div');
+  indicatorsContainer.className = 'indicators';
+
+  slides.forEach((_, index) => {
+    const indicator = document.createElement('span');
+    indicator.className = 'indicator';
+    indicator.dataset.index = index;
+    indicator.onclick = () => goToSlide(sliderId, index);
+    indicatorsContainer.appendChild(indicator);
+  });
+
+  // إضافة المؤشرات بعد السلايدر
+  slider.parentElement.appendChild(indicatorsContainer);
+  updateIndicators(sliderId);
+}
+
+// تحديث حالة المؤشرات لتطابق السلايد الحالي
+function updateIndicators(sliderId) {
+  const slider = document.getElementById(sliderId);
+  const slides = slider.querySelectorAll('.project-slide');
+  const indicators = slider.parentElement.querySelectorAll('.indicator');
+  const currentIndex = slide.indices ? slide.indices[sliderId] : 0;
+
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentIndex);
+  });
+}
+
+// الانتقال مباشرة إلى سلايد معين عبر المؤشر
+function goToSlide(sliderId, index) {
+  if (!slide.indices) slide.indices = {};
+  slide.indices[sliderId] = index;
+  slide(sliderId, 0); // التحديث بدون تغيير الاتجاه
 }
