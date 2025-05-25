@@ -36,7 +36,7 @@ It’s designed to be clean, responsive, and easy to navigate across devices.
 - `certificates.html` — List of certificates  
 - `css/` — Stylesheets  
 - `js/` — JavaScript files  
-- `assets/` — Images, icons, and other media
+- `images/` — Images, icons, and other media
 
 ---
 
