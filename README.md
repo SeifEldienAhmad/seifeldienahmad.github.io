@@ -51,5 +51,6 @@ Contributions and suggestions are welcome. Feel free to open issues or submit pu
 For any inquiries or feedback, you can reach me via GitHub or the contact form on the website.
 
 ---
+<sub><i>Keywords: Seif Eldien, Seif Ahmad, Seif Mohammed, سيف الدين, Cybersecurity, Linux, Red Team, Red Teamer, Ethical Hacking, Offensive Security, Information Security, Penetration Testing, Bug Bounty, Seif Eldien Ahmad Mohammad, Seif Portfolio, GitHub Portfolio, Linux Scripts, Parrot OS, Bash Tools, Cyber Defense, Digital Forensics, Linux Administration, Open Source, InfoSec, Cyber Student, Seif OSINT</i></sub>
 
 *Thank you for visiting my portfolio!*  
