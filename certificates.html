@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Certificates</title>
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="certificates.html" class="active">Certificates</a>
+    <a href="contact.html">Contact</a>
+    <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
+  </nav>
+
+  <main>
+    <h1>My Certificates</h1>
+    <p class="center-text">My certificates that I gained through my journey.</p>
+
+    <div class="project-card">
+      <h2>My Projects</h2>
+      <div class="slider-container">
+        <!-- السهم اليسار -->
+        <button class="arrow arrow-left" onclick="slide('slider', -1)">&#8249;</button>
+
+        <!-- سلايدر المشاريع -->
+        <div class="slider-wrapper" id="slider">
+          <div class="project-slide">
+            <img src="images/cerificates/linux_cheatsheet_dragon.png" alt="Linux Cheatsheet Dragon Logo">
+            <h3>CISCO "introduction to cybersecurity" certificate</h3>
+            <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/CISCO%20%22introduction%20to%20cybersecurity%22%20certificate.png" target="_blank">View Certificate</a>
+          </div>
+
+          <div class="project-slide">
+            <img src="images/certificates/swot_cyber_fayoum.png" alt="Cybersecurity SWOT Analysis">
+            <h3>CISCO_"Networking Basics"_Certificate</h3>
+            <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/CISCO_%22Networking%20Basics%22_Certificate.jpg" target="_blank">View Certificate</a>
+          </div>
+          <div class="project-slide">
+            <img src="images/certificates/bash_scripts.png" alt="My Bash Scripts">
+            <h3>cybrary-cert-offensive-security-operations</h3>
+            <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/cybrary-cert-offensive-security-operations.pdf" target="_blank">View Certificate</a>
+          </div>
+          <div class="project-slide">
+            <img src="images/certificates/byMe.png" alt="RHSA WriteUp">
+            <h3>cybrary-cert-the-cyber-kill-chain</h3>
+            <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/cybrary-cert-the-cyber-kill-chain.pdf" target="_blank">View Certificate</a>
+          </div>
+         </div>
+        <!-- السهم اليمين -->
+        <button class="arrow arrow-right" onclick="slide('slider', 1)">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- نافذة عرض الصور -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+  </main>
+
+  <!-- سكريبتات الجافاسكريبت -->
+  <script src="js/slider.js"></script>
+  <script src="js/theme-toggle.js"></script>
+</body>
+</html>
