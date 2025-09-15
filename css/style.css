@@ -37,12 +37,12 @@ nav .container {
     justify-content: space-between;
     align-items: center;
 }
-nav .main-menu {
+nav .main-menu a {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
-nav a:hover {
+nav .main-menu a:hover {
     color: var(--primary-color);
 }
 /* Hamburger Button */
