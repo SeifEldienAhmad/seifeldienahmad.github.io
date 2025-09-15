@@ -69,7 +69,7 @@ nav .main-menu a:hover {
 /* Hamburger Button */
 .hamburger-button {
   display: none;
-  padding: 6px 12px;
+  padding: 4px 6px;
   border: 2px solid var(--link-color);
   background: none;
   color: var(--link-color);
