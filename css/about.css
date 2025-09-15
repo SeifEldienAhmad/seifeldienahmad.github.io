@@ -28,31 +28,123 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
   background-color: var(--bg-color);
   padding: 15px;
   flex-wrap: wrap;
 }
 
-nav a {
-  color: var(--link-color);
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Default styling for the main menu (Desktop) */
+nav .main-menu {
+  display: flex;
+  gap: 30px;
+}
+
+nav .main-menu a {
   text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color);
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
 }
 
-nav a:hover {
-  background-color: var(--hover-bg);
-  color: var(--hover-color);
+nav .main-menu a.active {
+  color: var(--active-color);
+  background-color: var(--active-bg);
+  box-shadow: 0 0 10px 2px var(--link-color);
 }
 
-nav a.active {
+nav .main-menu a:hover {
+  background-color: var(--link-hover);
+  color: #000;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+  display: none;
+  padding: 8px 15px;
+  border: none;
   background-color: var(--active-bg);
   color: var(--active-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 10px 2px var(--link-color);
+  z-index: 1000;
 }
+
+.hamburger-button:hover {
+  filter: brightness(1.2);
+}
+
+.hamburger-button .hamburger-line {
+  width: 20px;
+  height: 2px;
+  margin: 3px 0;
+  background: var(--active-color);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  color: var(--text-color);
+  background: var(--bg-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  background: var(--bg-color);
+  padding: 0;
+  margin-top: 100px;
+}
+
+.mobile-menu ul li {
+  color: var(--text-color);
+  background: var(--bg-color);
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  display: block;
+  font-size: 20px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: var(--text-color);
+  background: var(--bg-color);
+  padding: 15px;
+}
+
+/* Style for active link in the mobile menu */
+.mobile-menu ul li a.active {
+  color: var(--active-color);
+  background-color: var(--active-bg);
+  box-shadow: 0 0 10px 2px var(--link-color);
+  border-radius: 8px;
+}
+
 
 .toggle-theme {
   position: absolute;
