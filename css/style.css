@@ -24,7 +24,7 @@ body {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-.nav {
+nav {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -32,24 +32,24 @@ body {
   padding: 15px;
   flex-wrap: wrap;
 }
-.nav .container {
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav .main-menu ul {
+nav .main-menu ul {
     display: flex;  
 }
-.nav ul li a {
+nav ul li a {
     padding: 10px 20px;
     display: block;
     font-weight: 600;
     transition: 0.5s;
 }
-.nav ul li a:hover {
+nav ul li a:hover {
     color: var(--primary-color);
 }
-.nav ul li a i {
+nav ul li a i {
     margin-right: 10px;
 }
 
