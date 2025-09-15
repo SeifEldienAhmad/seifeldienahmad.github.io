@@ -53,6 +53,7 @@ nav ul li a i {
     margin-right: 10px;
 }
 
+/* Hamburger Button */
 .hamburger-button {
   display: none;
   background: none;
@@ -99,7 +100,6 @@ nav ul li a i {
   font-size: 20px;
   transition: 0.3s;
 }
-
 
 .toggle-theme {
   position: absolute;
