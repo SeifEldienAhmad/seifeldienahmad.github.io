@@ -207,16 +207,15 @@ a:hover {
   color: var(--link-hover);
 }
 
-@media (max-width: 600px) {
-  nav {
-    gap: 8px;
+/* Mobile Responsive */
+@media (max-width: 670px) {
+  nav .main-menu {
+    display: none;
   }
-
-  nav a {
-    font-size: 14px;
-    padding: 6px 10px;
+  .hamburger-button {
+    display: block;
   }
-
+    
   .toggle-theme {
     font-size: 13px;
     padding: 5px 8px;
@@ -225,12 +224,15 @@ a:hover {
     position: relative;
     margin-top: 10px;
   }
-
-  .project-slide {
-    flex: 0 0 85%;
+  
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
   }
+}
 
-  .slider-wrapper {
-    gap: 0;
+@media (max-width: 500px) {
+  .text-xxl {
+    font-size: 2rem;
   }
 }
