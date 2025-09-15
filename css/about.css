@@ -239,8 +239,7 @@ a:hover {
     position: relative;
     margin-top: 10px;
   }
-}
-
+  
 @media (max-width: 960px) {
   .text-xxl {
     font-size: 2.5rem;
@@ -252,4 +251,3 @@ a:hover {
     font-size: 2rem;
   }
 }
-```
