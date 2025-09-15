@@ -24,6 +24,7 @@ body {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
 nav {
   display: flex;
   justify-content: center;
@@ -32,19 +33,37 @@ nav {
   padding: 15px;
   flex-wrap: wrap;
 }
+
 nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+nav .main-menu {
+  display: flex;
+  gap: 30px;
+}
+
 nav .main-menu a {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
 }
+
+nav .main-menu a.active {
+  color: var(--active-color);
+  background-color: var(--active-bg);
+  box-shadow: 0 0 10px 2px var(--link-color);
+}
+
 nav .main-menu a:hover {
-    color: var(--primary-color);
+  background-color: var(--link-hover);
+  color: #000;
 }
+
 /* Hamburger Button */
 .hamburger-button {
   display: none;
@@ -63,7 +82,7 @@ nav .main-menu a:hover {
 .hamburger-button .hamburger-line {
   width: 30px;
   height: 3px;
-  background: #333;
+  background: var(--link-color);
   margin: 6px 0;
 }
 
@@ -153,6 +172,7 @@ p {
 .links a:hover {
   color: var(--link-hover);
 }
+
 @media (max-width: 960px) {
   .text-xxl {
     font-size: 2.5rem;
@@ -163,10 +183,10 @@ p {
   nav .main-menu {
     display: none;
   }
-
   nav .hamburger-button {
     display: block;
   }
+}
 
 @media (max-width: 500px) {
   .text-xxl {
