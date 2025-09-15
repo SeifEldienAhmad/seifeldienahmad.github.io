@@ -83,7 +83,7 @@ nav .main-menu a:hover {
   width: 30px;
   height: 3px;
   background: var(--link-color);
-  margin: 6px 0;
+  margin: 0 0;
 }
 
 /* Mobile Menu */
