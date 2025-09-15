@@ -40,12 +40,12 @@ nav .container {
   align-items: center;
 }
 
-nav .main-menu {
+nav .container .main-menu {
   display: flex;
   gap: 30px;
 }
 
-nav .main-menu a {
+nav .container .main-menu a {
   text-decoration: none;
   color: var(--text-color);
   padding: 8px 15px;
@@ -53,13 +53,13 @@ nav .main-menu a {
   border-radius: 8px;
 }
 
-nav .main-menu a.active {
+nav .container .main-menu a.active {
   color: var(--active-color);
   background-color: var(--active-bg);
   box-shadow: 0 0 10px 2px var(--link-color);
 }
 
-nav .main-menu a:hover {
+nav .container .main-menu a:hover {
   background-color: var(--link-hover);
   color: #000;
 }
