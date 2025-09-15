@@ -82,6 +82,7 @@ nav .main-menu a:hover {
 .hamburger-button .hamburger-line {
   width: 15px;
   height: 1px;
+  margin: 2px 0;
   background: var(--link-color);
   margin: 0 0;
 }
