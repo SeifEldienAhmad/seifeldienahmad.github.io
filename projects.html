@@ -8,14 +8,42 @@
   <link rel="stylesheet" href="css/projects.css" />
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html" class="active">Projects</a>
-    <a href="certificates.html">Certificates</a>
-    <a href="contact.html">Contact</a>
-    <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
-  </nav>
+   <nav>
+    <div class="container">
+      <div class="main-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
+      <button class="hamburger-button">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </button>
+      <div class="mobile-menu">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="projects.html" class="active">Projects</a>
+          </li>
+          <li>
+            <a href="certificates.html">Certificates</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <main>
     <h1>Personal Portfolio</h1>
