@@ -73,7 +73,7 @@ nav .main-menu a:hover {
   border: 2px solid var(--link-color);
   background: none;
   color: var(--link-color);
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 1000;
