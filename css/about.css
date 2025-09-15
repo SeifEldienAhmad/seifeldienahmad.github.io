@@ -1,15 +1,3 @@
-Based on your request, I will edit the `about.css` file to fix the mobile layout issues without merging it with any other CSS files.
-
-The main problems in the current design are:
-
-1.  **Duplicate Menus:** Both the full main menu and the mobile menu are visible on mobile screens.
-2.  **Incorrect Hamburger Button Styling:** The hamburger button is not correctly styled, causing it to look out of place.
-
-### Final about.css Code
-
-Here is the corrected `about.css` file. I have fixed the media queries and applied the correct styling to the hamburger button to match the active menu link.
-
-```css
 :root {
   --bg-color: #121212;
   --text-color: #e0e0e0;
