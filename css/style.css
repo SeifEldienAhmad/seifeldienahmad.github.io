@@ -42,12 +42,12 @@ nav .container {
 }
 
 /* Default styling for the main menu (Desktop) */
-nav .container .main-menu {
-  display: flex; /* بيخلي القائمة أفقية على الديسكتوب */
+nav .main-menu {
+  display: flex;
   gap: 30px;
 }
 
-nav .container .main-menu a {
+nav .main-menu a {
   text-decoration: none;
   color: var(--text-color);
   padding: 8px 15px;
@@ -55,22 +55,20 @@ nav .container .main-menu a {
   border-radius: 8px;
 }
 
-nav .container .main-menu a.active {
+nav .main-menu a.active {
   color: var(--active-color);
   background-color: var(--active-bg);
   box-shadow: 0 0 10px 2px var(--link-color);
 }
 
-nav .container .main-menu a:hover {
+nav .main-menu a:hover {
   background-color: var(--link-hover);
   color: #000;
 }
 
 /* Hamburger Button */
 .hamburger-button {
-  display: none; /* The default is hidden on large screens */
-  right: 20px;
-  top: 12px;
+  display: none;
   padding: 6px 12px;
   border: 2px solid var(--link-color);
   background: none;
@@ -108,7 +106,7 @@ nav .container .main-menu a:hover {
 .mobile-menu ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /* بيخلي القائمة رأسية على الموبايل */
+  flex-direction: column;
   padding: 0;
   margin-top: 100px;
 }
@@ -126,10 +124,8 @@ nav .container .main-menu a:hover {
   padding: 15px;
 }
 
+/* The toggle-theme button is outside the main menu to always show up */
 .toggle-theme {
-  position: absolute;
-  right: 20px;
-  top: 12px;
   padding: 6px 12px;
   border: 2px solid var(--link-color);
   background: none;
@@ -183,18 +179,21 @@ p {
 }
 
 /* Media Queries for responsiveness */
-@media (max-width: 960px) {
-  .text-xxl {
-    font-size: 2.5rem;
-  }
-}
-
 @media (max-width: 670px) {
   nav .main-menu {
     display: none;
   }
-  nav .hamburger-button {
+  .hamburger-button {
     display: block;
+  }
+  .toggle-theme {
+    /* adjust button position on mobile if needed */
+  }
+}
+
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
   }
 }
 
