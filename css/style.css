@@ -199,7 +199,8 @@ p {
   color: var(--link-hover);
 }
 
-/* Media Queries for responsiveness */
+
+/* Mobile Responsive */
 @media (max-width: 670px) {
   nav .main-menu {
     display: none;
@@ -207,11 +208,16 @@ p {
   .hamburger-button {
     display: block;
   }
+    
   .toggle-theme {
-    /* adjust button position on mobile if needed */
+    font-size: 13px;
+    padding: 5px 8px;
+    top: auto;
+    right: auto;
+    position: relative;
+    margin-top: 10px;
   }
-}
-
+  
 @media (max-width: 960px) {
   .text-xxl {
     font-size: 2.5rem;
