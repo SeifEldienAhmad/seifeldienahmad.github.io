@@ -103,17 +103,23 @@ nav .main-menu a:hover {
 
 .mobile-menu.active {
   right: 0;
+  color: var(--text-color);
+  background: var(--bg-color);
 }
 
 .mobile-menu ul {
   list-style: none;
   display: flex;
   flex-direction: column;
+  color: var(--text-color);
+  background: var(--bg-color);
   padding: 0;
   margin-top: 100px;
 }
 
 .mobile-menu ul li {
+  color: var(--text-color);
+  background: var(--bg-color);
   margin: 10px 0;
 }
 
@@ -122,7 +128,8 @@ nav .main-menu a:hover {
   font-size: 20px;
   transition: 0.3s;
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
+  background: var(--bg-color);
   padding: 15px;
 }
 
