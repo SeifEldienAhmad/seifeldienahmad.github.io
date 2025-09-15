@@ -340,16 +340,26 @@ h1 {
 }
 
 /* Mobile Responsive */
-@media (max-width: 600px) {
-  nav {
-    gap: 8px;
+/* Media Queries for responsiveness */
+  @media (max-width: 670px) {
+    nav .main-menu {
+      display: none;
+    }
+    .hamburger-button {
+      display: block;
+    }
+    
+  @media (max-width: 960px) {
+    .text-xxl {
+      font-size: 2.5rem;
+    }
   }
-
-  nav a {
-    font-size: 14px;
-    padding: 6px 10px;
+  
+  @media (max-width: 500px) {
+    .text-xxl {
+      font-size: 2rem;
+    }
   }
-
   .toggle-theme {
     font-size: 13px;
     padding: 5px 8px;
