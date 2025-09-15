@@ -24,8 +24,7 @@ body {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
-nav {
+.nav {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -33,26 +32,25 @@ nav {
   padding: 15px;
   flex-wrap: wrap;
 }
-
-nav a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s, color 0.3s;
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-nav a:hover {
-  background-color: var(--hover-bg);
-  color: var(--hover-color);
-  transition: 0.5s;
+.nav .main-menu ul {
+    display: flex;  
 }
-
-nav a.active {
-  background-color: var(--active-bg);
-  color: var(--active-color);
+.nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.nav ul li a:hover {
+    color: var(--primary-color);
+}
+.nav ul li a i {
+    margin-right: 10px;
 }
 
 .toggle-theme {
