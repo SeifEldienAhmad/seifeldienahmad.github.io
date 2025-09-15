@@ -33,6 +33,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -87,7 +88,7 @@ nav .main-menu a:hover {
 /* Hamburger Button */
 .hamburger-button {
   display: none;
-  padding: 8px 15px; /* نفس الـ padding بتاع الروابط */
+  padding: 8px 15px;
   border: none;
   background-color: var(--active-bg);
   color: var(--active-color);
@@ -99,7 +100,7 @@ nav .main-menu a:hover {
 }
 
 .hamburger-button:hover {
-  filter: brightness(1.2); /* For a subtle hover effect */
+  filter: brightness(1.2);
 }
 
 .hamburger-button .hamburger-line {
