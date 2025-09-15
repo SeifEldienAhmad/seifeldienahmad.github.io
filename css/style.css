@@ -38,7 +38,8 @@ nav .container {
     align-items: center;
 }
 nav .main-menu {
-    display: flex;  
+    display: flex;
+    gap: 30px;
 }
 nav a:hover {
     color: var(--primary-color);
