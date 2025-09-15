@@ -84,7 +84,6 @@ nav .main-menu a:hover {
   height: 1px;
   margin: 2px 0;
   background: var(--link-color);
-  margin: 0 0;
 }
 
 /* Mobile Menu */
@@ -131,6 +130,14 @@ nav .main-menu a:hover {
   color: var(--text-color);
   background: var(--bg-color);
   padding: 15px;
+}
+
+/* Style for active link in the mobile menu */
+.mobile-menu ul li a.active {
+  color: var(--active-color);
+  background-color: var(--active-bg);
+  box-shadow: 0 0 10px 2px var(--link-color);
+  border-radius: 8px;
 }
 
 /* The toggle-theme button is outside the main menu to always show up */
