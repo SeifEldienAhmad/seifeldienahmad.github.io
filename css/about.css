@@ -89,7 +89,7 @@ nav {
 
   background-color: var(--bg-color);
 
-  padding: 15px;
+  padding: 10px;
 
   flex-wrap: wrap;
 
@@ -104,7 +104,7 @@ nav .container {
 
   align-items: center;
 
-  max-width: 900px;
+  max-width: 700px;
 
   width: 100%;
 
@@ -130,7 +130,7 @@ nav .main-menu a {
 
   padding: 8px 15px;
 
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 
   border-radius: 8px;
 
@@ -175,7 +175,7 @@ nav .main-menu a:hover {
 
   cursor: pointer;
 
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 
   box-shadow: 0 0 10px 2px var(--link-color);
 
