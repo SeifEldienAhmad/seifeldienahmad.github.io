@@ -226,6 +226,9 @@ a:hover {
 
 /* Mobile Responsive */
 @media (max-width: 670px) {
+  nav {
+    display: flex;
+  }
   nav .main-menu {
     display: none;
   }
