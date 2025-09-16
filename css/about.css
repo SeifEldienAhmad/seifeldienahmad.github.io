@@ -91,7 +91,7 @@ nav .main-menu a:hover {
   color: var(--active-color);
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 0 10px 2px var(--link-color);
   z-index: 1000;
 }
