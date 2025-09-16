@@ -226,9 +226,6 @@ a:hover {
 
 /* Mobile Responsive */
 @media (max-width: 670px) {
-  nav {
-    display: flex;
-  }
   nav .main-menu {
     display: none;
   }
@@ -244,7 +241,15 @@ a:hover {
     position: relative;
     margin-top: 10px;
   }
-  
+
+  .project-slide {
+    flex: 0 0 85%;
+  }
+
+  .slider-wrapper {
+    gap: 0;
+  }
+}
 @media (max-width: 960px) {
   .text-xxl {
     font-size: 2.5rem;
