@@ -1,9 +1,11 @@
 :root {
   --bg-color: #121212;
+  --card-bg: #1e1e1e;
   --text-color: #e0e0e0;
+  --accent-color: #82aaff;
+  --slide-bg: #2b2b2b;
   --link-color: #82aaff;
   --link-hover: #c3f0ff;
-  --card-bg: #1e1e1e;
   --shadow: rgba(0, 0, 0, 0.5);
   --hover-bg: #333;
   --hover-color: #fff;
