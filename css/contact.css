@@ -367,6 +367,7 @@ form {
   display: flex;
 
   flex-direction: column;
+  margin: center;
 
   padding: 8px 15px;
 
@@ -492,5 +493,6 @@ font-size: 2rem;
 }
 
 } 
+
 
 
