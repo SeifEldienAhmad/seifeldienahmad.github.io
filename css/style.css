@@ -68,6 +68,8 @@ nav .container {
 
 display: flex;
 
+margin: center; 
+
 justify-content: space-between;
 
 align-items: center;
@@ -427,4 +429,5 @@ font-size: 2rem;
 }
 
 } 
+
 }
