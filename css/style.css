@@ -98,7 +98,7 @@ color: var(--text-color);
 
 padding: 8px 15px;
 
-transition: all 0.3s ease;
+transition: all 0.5s ease;
 
 border-radius: 8px;
 
@@ -427,3 +427,4 @@ font-size: 2rem;
 }
 
 } 
+}

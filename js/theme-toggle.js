@@ -45,7 +45,8 @@ window.onload = () => {
   if (typeof reloadDisqus === 'function') {
     reloadDisqus(); // لو موجودة
   }
-};
+}; 
+
 // mobile menu
 document.addEventListener('DOMContentLoaded', () => {
   const hamburgerButton = document.querySelector('.hamburger-button');
