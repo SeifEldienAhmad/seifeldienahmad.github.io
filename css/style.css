@@ -84,7 +84,7 @@ width: 100%;
 nav .main-menu {
 
 display: flex;
-
+margin: center;
 gap: 30px;
 
 }
@@ -431,4 +431,5 @@ font-size: 2rem;
 } 
 
 }
+
 
