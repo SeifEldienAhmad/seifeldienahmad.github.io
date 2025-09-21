@@ -84,7 +84,7 @@ width: 100%;
 nav .main-menu {
 
 display: flex;
-
+margin: center;
 gap: 30px;
 
 }
@@ -96,7 +96,7 @@ text-decoration: none;
 
 color: var(--text-color);
 
-padding: 8px 15px;
+padding: 8px 12px;
 
 transition: all 0.5s ease;
 
@@ -684,3 +684,4 @@ font-size: 2rem;
 }
 
 } 
+
