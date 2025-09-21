@@ -85,7 +85,7 @@ nav .main-menu {
 
 display: flex;
 
-gap: 30px;
+gap: 15px;
 
 }
 
@@ -428,6 +428,7 @@ font-size: 2rem;
 
 } 
 }
+
 
 
 
