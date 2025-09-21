@@ -368,6 +368,8 @@ form {
 
   flex-direction: column;
 
+  padding: 8px 15px;
+
   gap: 12px;
 
 }
@@ -490,3 +492,4 @@ font-size: 2rem;
 }
 
 } 
+
