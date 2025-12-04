@@ -165,11 +165,17 @@ h1, h2 {
 }
 
 ul {
-  list-style: disc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: decimal;
   color: var(--text-color);
   padding-left: 20px;
 }
-
+ul li{
+  width: 45%;
+  margin-bottom: 15px;
+}
 strong {
   color: var(--text-color);
 }
