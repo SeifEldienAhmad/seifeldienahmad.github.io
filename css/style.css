@@ -147,6 +147,28 @@ transition: all 0.3s ease;
 background-color: var(--link-color);
 color: #000;
 }
+.container {
+max-width: 900px;
+margin: 40px auto;
+padding: 20px;
+background-color: var(--card-bg);
+border-radius: 10px;
+box-shadow: 0 0 10px var(--shadow);
+}
+
+.profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--link-color);
+    display: inline-block;
+}
 
 .container {
 max-width: 900px;
@@ -157,27 +179,106 @@ border-radius: 10px;
 box-shadow: 0 0 10px var(--shadow);
 }
 
-h1, h2 {
-color: var(--text-color);
-}
-
-p {
-color: var(--text-color);
-line-height: 1.8;
+.profile-pic {
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .profile-pic img {
-width: 150px;
-height: 150px;
-object-fit: cover;
-border-radius: 50%;
-border: 3px solid var(--link-color);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--link-color);
+    display: inline-block;
 }
 
-.links{
+h1{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+color: var(--text-color);
+text-align: center;
+margin-top: 5px;
+margin-bottom: 2px;
+}
+
+h2 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: var(--text-color);
+text-align: center;
+margin-top: 2px;
+margin-bottom: 10px; 
+}
+
+p{
+font-weight: bold;
+font-family: sans-serif;
+color: var(--text-color);
+line-height:1.8;
+margin: 10px auto 0;
+padding: 0;
+text-align: left;
+}
+
+..container {
+max-width: 900px;
+margin: 40px auto;
+padding: 20px;
+background-color: var(--card-bg);
+border-radius: 10px;
+box-shadow: 0 0 10px var(--shadow);
+}
+
+.profile-pic {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--link-color);
+    display: inline-block;
+}
+h1{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+color: var(--text-color);
+text-align: center;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+h2 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: var(--text-color);
+text-align: center;
+margin-top: 5px;
+margin-bottom: 20px; 
+}
+h3 {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: var(--text-color);
+text-align: center;
+margin-top: 5px;
+margin-bottom: 20px; 
+}
+p{
+font-weight: bold;
+font-family: sans-serif;
+color: var(--text-color);
+line-height:1.8;
+margin: 15px auto 0;
+padding: 0;
+text-align: center;
+}
+.links {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
+
 .links a {
 display: inline-block;
 margin: 10px 15px 0 0;
@@ -217,4 +318,21 @@ font-size: 2.5rem;
 font-size: 2rem;
 }
 } 
+}
+
+/* Matrix 2xN Layout for Social Links */
+@media (max-width: 600px) {
+    .links {
+        justify-content: center;
+        gap: 15px 5px;
+    }
+    
+    .links a {
+        flex-basis: 45%;
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid var(--link-color);
+        border-radius: 5px;
+        text-align: center;
+    }
 }

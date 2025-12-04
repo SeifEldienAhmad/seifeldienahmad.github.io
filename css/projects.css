@@ -179,101 +179,107 @@ box-shadow: 0 6px 15px var(--shadow);
 
 /* Slider */
 .slider-container {
-position: relative;
-overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
-
 
 .slider-wrapper {
-display: flex;
-transition: transform 0.5s ease-in-out;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-
 .project-slide {
-flex: 0 0 250px;
-background-color: var(--bg-color);
-margin: 0 10px;
-border-radius: 10px;
-padding: 15px;
-text-align: center;
-transition: transform 0.3s, box-shadow 0.3s;
-box-shadow: 0 4px 12px var(--shadow);
+    flex: 0 0 250px;
+    background-color: var(--bg-color);
+    margin: 0 10px;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
 .project-slide:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 25px var(--shadow);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--shadow);
 }
-
 
 .project-slide img {
-width: 100%;
-height: 180px;
-object-fit: cover;
-border-radius: 12px;
-margin-bottom: 10px;
-transition: transform 0.3s ease;
-cursor: pointer;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-
 .project-slide img:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .project-slide h3 {
-color: var(--accent-color);
-font-size: 1.1em;
-margin-top: 10px;
+    color: var(--accent-color);
+    font-size: 1.1em;
+    margin-top: 10px;
 }
 
-
 .project-slide p {
-font-size: 0.95em;
-margin: 10px 0;
-color: var(--text-color);
+    font-size: 0.95em;
+    margin: 10px 0;
+    color: var(--text-color);
 }
 
 .project-slide a {
-display: inline-block;
-margin-top: 10px;
-padding: 6px 12px;
-background-color: var(--accent-color);
-color: var(--active-color);
-border-radius: 6px;
-text-decoration: none;
-font-weight: bold;
-transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 6px;
+    border-color: (var(--text-color));
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-slide a:hover {
-background-color: var(--link-hover);
+    background-color: var(--link-hover);
+    color: var(--active-color);
 }
 
-/* Arrows */
-
 .arrow {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background-color: var(--hover-bg);
-color: var(--hover-color);
-border: none;
-font-size: 20px;
-padding: 10px;
-cursor: pointer;
-z-index: 10;
-border-radius: 50%;
-transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: var(--hover-bg, rgba(0, 0, 0, 0.6));
+    color: var(--hover-color, white);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 25;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.arrow:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .arrow-left {
-left: 0;
+    left: 10px;
 }
 
 .arrow-right {
-right: 0;
+    right: 10px;
 }
 
 /* Modal */
