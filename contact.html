@@ -6,51 +6,46 @@
   <meta name="description" content="Contact Seif Eldien Ahmad Mohammad via email, LinkedIn, or WhatsApp. Send a message directly.">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <title>Contact Me - Seif Eldien Ahmad Mohammad</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <nav>
+   <div class="container">
+     <div class="main-menu">
+       <a href="index.html" >Home</a>
+       <a href="about.html">About</a>
+       <a href="projects.html">Projects</a>
+       <a href="certificates.html">Certificates</a>
+       <a href="contact.html" class="active">Contact</a>
+     </div>
+     <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
+     <button class="hamburger-button">
+       <div class="hamburger-line"></div>
+       <div class="hamburger-line"></div>
+       <div class="hamburger-line"></div>
+     </button>
+     <div class="mobile-menu">
+       <ul>
+         <li>
+           <a href="index.html">Home</a>
+         </li>
+         <li>
+           <a href="about.html">About</a>
+         </li>
+         <li>
+           <a href="projects.html">Projects</a>
+         </li>
+         <li>
+           <a href="certificates.html">Certificates</a>
+         </li>
+         <li>
+           <a href="contact.html" class="active">Contact</a>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
   <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="container">
-      <div class="main-menu">
-        <a href="index.html" >Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="certificates.html">Certificates</a>
-        <a href="contact.html" class="active">Contact</a>
-      </div>
-      <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
-      <button class="hamburger-button">
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
-      </button>
-      <div class="mobile-menu">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="certificates.html">Certificates</a>
-          </li>
-          <li>
-            <a href="contact.html" class="active">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <div class="container">
     <h1>Contact Me</h1>
     <p>You can reach me directly via:</p>
@@ -66,7 +61,7 @@
     <form action="https://formspree.io/f/xqapvqda" method="POST">
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+      <input type="text" class="message" placeholder="Your message..." required>
       <button type="submit">Send</button>
     </form>
   </div>
