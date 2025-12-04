@@ -154,7 +154,6 @@ border-radius: 10px;
 box-shadow: 0 0 10px var(--shadow);
 }
 
-
 .section {
   display: flex;
   flex-direction: column;
@@ -217,7 +216,6 @@ a:hover {
     font-size: 2.5rem;
   }
 }
-
 
 @media (max-width: 500px) {
   .text-xxl {
