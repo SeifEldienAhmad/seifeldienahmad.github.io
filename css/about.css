@@ -182,7 +182,20 @@ a {
 a:hover {
   color: var(--link-hover);
 }
+.links{
+  display: flex;
+  justify-content: space-around;
+}
+.links a {
+display: inline-block;
+margin: 10px 15px 0 0;
+color: var(--link-color);
+text-decoration: none;
+}
 
+.links a:hover {
+color: var(--link-hover);
+}
 /* Mobile Responsive */
 @media (max-width: 670px) {
   nav .main-menu {
