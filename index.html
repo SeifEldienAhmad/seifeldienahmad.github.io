@@ -10,12 +10,12 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <title>Seif Eldien Ahmad Mohammad | Official Personal Website</title>
 <nav>
-   <div class="container">
+   <div class="container" id="navbar">
      <div class="main-menu">
-       <a href="index.html" class="active">Home</a>
-       <a href="about.html">About</a>
-       <a href="projects.html">Projects</a>
-       <a href="certificates.html">Certificates</a>
+       <a href="#brief">Home</a>
+       <a href="#about">About</a>
+       <a href="#Projects">Projects</a>
+       <a href="#Certificates">Certificates</a>
        <a href="contact.html">Contact</a>
      </div>
      <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
@@ -27,16 +27,16 @@
      <div class="mobile-menu">
        <ul>
          <li>
-           <a href="index.html" class="active">Home</a>
+           <a href="#brief">Home</a>
          </li>
          <li>
-           <a href="about.html">About</a>
+           <a href="#about">About</a>
          </li>
          <li>
-           <a href="projects.html">Projects</a>
+           <a href="#Projects">Projects</a>
          </li>
          <li>
-           <a href="certificates.html">Certificates</a>
+           <a href="#Projects">Certificates</a>
          </li>
          <li>
            <a href="contact.html">Contact</a>
@@ -95,24 +95,198 @@
  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <div class="container">
+ <div class="container" id="brief">
    <div class="profile-pic">
      <img src="images/myphoto.jpeg" alt="Seif Eldien Ahmad Mohammad">
    </div>
    <h1>Seif Eldien Ahmad Mohammad</h1>
-   <h2><strong>Red Teaming Student</strong></h2>
+   <h2 id="aim"><strong>Red Teaming Student</strong></h2>
    <h3><strong>penetration Tester</strong></h3>
    <p>I’m a passionate cybersecurity student focusing on Red Teaming and penetration testing. Currently studying at the Faculty of Science, I’m building hands-on skills in Linux, penetration testing, and offensive security.</p>
-   <div class="links">
-     <a href="https://github.com/SeifEldeinAhmad"><i class="fab fa-github"></i> GitHub</a>
-     <a href="https://www.linkedin.com/in/seifeldienahmad/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+ </div>
+<div class="container" id="about">
+   <h1>About Me</h1>
+   <p>My official name: <strong>Seif Eldien Ahmad Mohammad</strong>.</p>
+   <h2>Skills</h2>
+   <h2>Technical Skills:</h2>
+   <ul>
+   <li>CIA Understanding (CISCO Certified)</li>
+   <li>Networking Basics (CISCO Certified)</li>
+   <li>Python Essentials 1 (CISCO Certified)</li>
+   <li>Linux Administration and Bash Scripting</li>
+   <li>Java <strong>Learning</strong></li>
+   <li>Git/GitHub</li>
+   <li>Scientific Research (URI Certified)</li>
+   <li>Microsoft Office</li>
+   </ul>
+   <h2>Other Skills:</h2>
+   <ul>
+   <li>Communication</li>
+   <li>Teamwork (Enactus Certified)</li>
+   <li>Leadership</li>
+   <li>Writing and Presentation Skills (Enactus Certified) </li>
+   <li>Planning and Organization</li>
+   </ul>
+
+   <h2>Follow Me On</h2>
+   <div class="links">
+    <a href="https://github.com/SeifEldeinAhmad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+     <a href="https://www.linkedin.com/in/seifeldienahmad/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
      <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-     <a href="https://www.facebook.com/share/1NFwKrmoZ7/"><i class="fab fa-facebook"></i> Facebook</a>
-     <a href="https://www.instagram.com/seifeldienahmad"><i class="fab fa-instagram"></i> Instagram</a>
-     <a href="https://dev.to/seifeldienahmad"><i class="fab fa-dev"></i> Dev.to</a>
-     <a href="https://medium.com/@seifeldienahmad"><i class="fab fa-medium"></i> Medium</a>
-   </div>
- </div> 
+     <a href="https://www.facebook.com/share/1NFwKrmoZ7/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+     <a href="https://www.instagram.com/seifeldienahmad" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+     <a href="https://dev.to/seifeldienahmad" target="_blank"><i class="fab fa-dev"></i> Dev.to</a>
+     <a href="https://medium.com/@seifeldienahmad" target="_blank"><i class="fab fa-medium"></i> Medium</a>
+   </div>
+ 
+</div>
+<div class="container" id="Projects">
+   <h1>Personal Portfolio</h1>
+   <p class="center-text">A personal website was built to showcase my profile, skills, and projects in cybersecurity.</p>
+   <div class="project-card">
+     <h2>My Projects</h2>
+     <div class="slider-container">
+       <button class="arrow arrow-left" onclick="slide('slider', -1)">&#8249;</button>
+       <div class="slider-wrapper" id="slider">
+         <div class="project-slide">
+           <img src="images/linux_cheatsheet_dragon.png" alt="Linux Cheatsheet Dragon Logo">
+           <h3>Linux Commands Cheatsheet</h3>
+           <p>A comprehensive guide to essential Linux commands for file handling, permissions, networking, and more.</p>
+           <a href="https://github.com/SeifEldienAhmad/Linux-cheatsheet-seif" target="_blank">View Project</a>
+         </div>
+
+         <div class="project-slide">
+           <img src="images/swot_cyber_fayoum.png" alt="Cybersecurity SWOT Analysis">
+           <h3>Cybersecurity Startup SWOT</h3>
+           <p>A strategic SWOT analysis and execution plan for launching a cybersecurity startup in Fayoum, Egypt.</p>
+           <a href="https://github.com/SeifEldienAhmad/Cybersecurity-Startup-at-Fayoum-Egypt/" target="_blank">View Plan</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/bash_scripts.png" alt="My Bash Scripts">
+           <h3>MyBashScripts</h3>
+           <p>A collection of useful Bash scripts to automate tasks and enhance productivity in Linux environments.</p>
+           <a href="https://github.com/SeifEldienAhmad/BashScripts" target="_blank">View Scripts</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/byMe.png" alt="RHSA WriteUp">
+           <h3>RHSA WriteUp</h3>
+           <p>GitHup writeup about red hat system administration uncertified course that I have finished and what I have learnt.</p>
+           <a href="https://github.com/SeifEldienAhmad/RHSA-WriteUp" target="_blank">View WriteUp</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/passwordCrackingProject.png" alt="Password Cracking Write-up">
+           <h3>Password Cracking Write-up</h3>
+           <p>GitHup writeup about my password cracking project that I made during my internship at YCKF</p>
+           <a href="https://github.com/SeifEldienAhmad/Password-Cracking-On-Open-Source-Systems-Project" target="_blank">View WriteUp</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/Penetration Testing on Metasploitable2.png" alt="Penetration Testing on Metasploitable2 Write-up">
+           <h3>Penetration Testing on Metasploitable2</h3>
+           <p>GitHup writeup about my Penetration Testing on Metasploitable2 project that I made during my internship at YCKF</p>
+           <a href="https://github.com/SeifEldienAhmad/Penetration-Testing-on-Metasploitable2" target="_blank">View WriteUp</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/websiteHacking.png" alt="Website Hacking Project">
+           <h3>Website Hacking project</h3>
+           <p>GitHup repo that contains project write project that I made during my internship at YCKF</p>
+           <a href="https://github.com/SeifEldienAhmad/Website-Hacking-Project-" target="_blank">View WriteUp</a>
+         </div>
+          <div class="project-slide">
+           <img src="images/cctv.png" alt="cctv server hacking">
+           <h3>CCTV Hacking (Simulated Environment Only)</h3>
+           <p>Lab-only CCTV security assessment: TurnKey ZoneMinder setup, safe scanning, CVE research & PoC validation — evidence + mitigation playbook. I made this during my internship at YCKF</p>
+           <a href="https://github.com/SeifEldienAhmad/CCTV-Hacking-Simulated-Environment-Only-" target="_blank">View WriteUp</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/WPA2 Hacking.png" alt="wireless hacking">
+           <h3>WPA2 Handshake Lab Simulated Exercise (Lab Only)</h3>
+           <p>Capture a WPA2 four-way handshake in a controlled lab and perform offline password-recovery experiments to study the relationship between passphrase strength and cracking feasibility. I made this during my internship at YCKF</p>
+           <a href="https://github.com/SeifEldienAhmad/WPA2-Handshake-Lab-Simulated-Exercise-Lab-Only-/" target="_blank">View WriteUp</a>
+         </div>
+        </div>
+       <button class="arrow arrow-right" onclick="slide('slider', 1)">&#8250;</button>
+     </div>
+   </div>
+</div>
+<div class="container" id="Certificates">
+   <h1>Certificates</h1>
+   <p class="center-text">My certificates that I gained through my journey.</p>
+   <div class="project-card">
+     <h2>My Certificates</h2>
+     <div class="slider-container">
+       <!-- السهم اليسار -->
+       <button class="arrow arrow-left" onclick="slide('slider', -1)">&#8249;</button>
+
+       <!-- سلايدر المشاريع -->
+       <div class="slider-wrapper" id="slider">
+         <div class="project-slide">
+           <img src="images/certificates/Introduction to cybersecurity.png" alt="certificate1">
+           <h3>introduction to cybersecurity</h3>
+           <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/CISCO%20%22introduction%20to%20cybersecurity%22%20certificate.png" target="_blank">View Certificate</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/certificates/Networking Basics.jpg" alt="certificate2">
+           <h3>Networking Basics</h3>
+           <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/CISCO_%22Networking%20Basics%22_Certificate.jpg" target="_blank">View Certificate</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/certificates/Python Essentials 1.jpeg" alt="certificate3">
+           <h3>Python Essentials 1</h3>
+           <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/CISCO_%22Networking%20Basics%22_Certificate.jpg" target="_blank">View Certificate</a>
+         </div>
+          <div class="project-slide">
+           <img src="images/certificates/cybrary-cert-reconnaissance-and-enumeration-basics.jpg" alt="certificate4">
+           <h3>Reconnaissance and Enumeration Basics</h3>
+           <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/cybrary-cert-reconnaissance-and-enumeration-basics.pdf" target="_blank">View Certificate</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/certificates/cybrary-cert-offensive-security-operations.jpg" alt="certificate5">
+           <h3>Offensive Security Operations</h3>
+           <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/cybrary-cert-offensive-security-operations.pdf" target="_blank">View Certificate</a>
+         </div>
+         <div class="project-slide">
+           <img src="images/certificates/cybrary-cert-the-cyber-kill-chain.jpg" alt="certificate6">
+           <h3>The Cyber Kill Chain</h3>
+           <a href="https://github.com/SeifEldienAhmad/MyCertificates/blob/main/cybrary-cert-the-cyber-kill-chain.pdf" target="_blank">View Certificate</a>
+         </div>
+        </div>
+       <!-- السهم اليمين -->
+       <button class="arrow arrow-right" onclick="slide('slider', 1)">&#8250;</button>
+     </div>
+   </div>
+
+   <!-- نافذة عرض الصور -->
+   <div id="imgModal" class="modal" onclick="closeModal()">
+     <span class="close">&times;</span>
+     <img class="modal-content" id="modalImg">
+   </div>
+ </div>
+<div class="container" id="contact">
+    <h1>Contact Me</h1>
+    <p>You can reach me directly via:</p>
+
+    <div class="contact-info">
+      <a href="mailto:seifahmed7293@gmail.com"><i class="fas fa-envelope"></i> E-mail</a>
+      <a href="https://www.linkedin.com/in/seifeldienahmad/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://dev.to/seifeldienahmad" target="_blank"><i class="fab fa-dev"></i> Dev.to</a>
+      <a href="https://medium.com/@seifeldienahmad" target="_blank"><i class="fab fa-medium"></i> Medium</a>
+    </div>
+
+    <h2>Or send me a message</h2>
+    <form action="https://formspree.io/f/xqapvqda" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <input type="text" class="message" placeholder="Your message..." required>
+      <button type="submit">Send</button>
+    </form>
+</div>
+   <!-- نافذة عرض الصور -->
+   <div id="imgModal" class="modal" onclick="closeModal()">
+     <span class="close">&times;</span>
+     <img class="modal-content" id="modalImg">
+   </div>
+
+ <script src="js/slider.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
  <script src="js/theme-toggle.js"></script>
 </body>
