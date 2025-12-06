@@ -600,20 +600,26 @@ h1, h2 {
 
 .contact-info {
   display: flex;
-  flex-direction: column;
+  height: 40px;
+  align-items: center;
+  margin: 30px 0;
   justify-content: space-evenly;
   gap: 8px;
   margin-bottom: 20px;
 }
 
 .contact-info a {
-  color: var(--link-color);
+  color: var(--text-color);
   text-decoration: none;
+  transition: 0.3s;
   font-size: 18px;
 }
 
-.contact-info a:hover {
-  color: var(--link-hover);
+.contact-info a:hover{
+  background-color: var(--link-hover);
+  padding: 8px 15px;
+  color: #000;
+  border-radius: 5px;
 }
 
 
