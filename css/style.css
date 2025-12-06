@@ -26,6 +26,12 @@ box-shadow: 0 0px 10px grey;
 border-radius: 35px;
 flex-wrap: wrap;
 }
+#header-container{
+  display: block;
+}
+#ghost{
+  display: none;
+}
 #navbar {
 display: flex;
 justify-content: space-between;
@@ -33,7 +39,6 @@ align-items: center;
 max-width: 900px;
 width: 100%;
 }
-/* Default styling for the main menu (Desktop) */
 nav .main-menu {
 display: flex;
 gap: 15px;
@@ -49,77 +54,6 @@ nav .main-menu a:hover {
 background-color: var(--link-hover);
 color: #000;
 }
-/* Hamburger Button */
-.hamburger-button {
-display: none;
-padding: 8px 15px;
-border: none;
-background-color: var(--active-bg);
-color: var(--active-color);
-border-radius: 8px;
-cursor: pointer;
-transition: all 0.5s ease;
-box-shadow: 0 0 10px 2px var(--link-color);
-z-index: 1000;
-}
-.hamburger-button:hover {
-filter: brightness(1.2);
-}
-.hamburger-button .hamburger-line {
-width: 20px;
-height: 2px;
-margin: 3px 0;
-background: var(--active-color);
-}
-/* Mobile Menu */
-.mobile-menu {
-position: fixed;
-top: 0;
-right: -300px;
-width: 250px;
-height: 100%;
-z-index: 100;
-color: var(--text-color);
-background: var(--bg-color);
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-transition: right 0.3s ease-in-out;
-}
-.mobile-menu.active {
-right: 0;
-color: var(--text-color);
-background: var(--bg-color);
-}
-.mobile-menu ul {
-list-style: none;
-display: flex;
-flex-direction: column;
-color: var(--text-color);
-background: var(--bg-color);
-padding: 0;
-margin-top: 100px;
-}
-.mobile-menu ul li {
-color: var(--text-color);
-background: var(--bg-color);
-margin: 10px 0;
-}
-.mobile-menu ul li a {
-display: block;
-font-size: 20px;
-transition: 0.3s;
-text-decoration: none;
-color: var(--text-color);
-background: var(--bg-color);
-padding: 15px;
-}
-/* Style for active link in the mobile menu */
-.mobile-menu ul li a.active {
-color: var(--active-color);
-background-color: var(--active-bg);
-box-shadow: 0 0 10px 2px var(--link-color);
-border-radius: 8px;
-}
-
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 max-width: 900px;
@@ -137,8 +71,8 @@ transition: background-color 0.3s ease, color 0.3s ease;
 100% { opacity: 1; transform: translateY(0); }
 }
 
-/* The toggle-theme button is outside the main menu to always show up */
 .toggle-theme {
+display: block;
 padding: 6px 12px;
 border: 2px solid var(--link-color);
 background: none;
@@ -337,7 +271,6 @@ margin-bottom: 25px;
 box-shadow: 0 6px 15px var(--shadow);
 }
 
-/* Slider */
 .slider-container {
     position: relative;
     overflow: hidden;
@@ -443,8 +376,6 @@ box-shadow: 0 6px 15px var(--shadow);
     right: 10px;
 }
 
-/* Modal */
-
 .modal {
 display: none;
 position: fixed;
@@ -493,7 +424,6 @@ margin-bottom: 25px;
 box-shadow: 0 6px 15px var(--shadow);
 }
 
-/* Slider */
 .slider-container {
     position: relative;
     overflow: hidden;
@@ -599,8 +529,6 @@ margin-bottom: 0;
     right: 10px;
 }
 
-/* Modal */
-
 .modal {
 display: none;
 position: fixed;
@@ -704,7 +632,6 @@ input, .message {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* input::placeholder, */
 .message{
   align-items: center;
   height: 92px;
@@ -715,8 +642,7 @@ input, .message {
 }
 
 button {
-  /* background-color: var(--accent-color); */
-  /* color: var(--active-color);  */
+  color: var(--active-color);
   width: 102%;
   background-attachment: #82aaff;
   color: #121212;
@@ -732,44 +658,66 @@ button:hover {
   background-color: var(--link-hover);
   color: var(--bg-color);
 }
-/* Mobile Responsive */
 
 @media (max-width: 670px) {
-nav .main-menu {
-display: none;
-}
-.hamburger-button {
-display: block;
-}
-.toggle-theme {
-font-size: 13px;
-padding: 5px 8px;
-top: auto;
-right: auto;
-position: relative;
-margin-top: 10px;
-}
-.project-slide {
-flex: 0 0 85%;
+  nav .main-menu {
+    display: none;
+  }
+  
+  #header-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 5svw;
+  }
+  
+  #ghost {
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-right: 25%;
+    margin-left: 0;
+    line-height: 1;
+  }
+  
+  .toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    flex-shrink: 0;
+    font-size: 1.5em;
+    border: 1px solid var(--text-color);
+    border-radius: 50%; 
+    background: none;
+    cursor: pointer;
+    margin-top: 0;
+  }
+
+  .project-slide {
+    flex: 0 0 85%;
+  }
+
+  .slider-wrapper {
+    gap: 0;
+  }
+
+  @media (max-width: 960px) {
+    .text-xxl {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .text-xxl {
+      font-size: 2rem;
+    }
+  }
 }
 
-.slider-wrapper {
-gap: 0;
-}
-@media (max-width: 960px) {
-.text-xxl {
-font-size: 2.5rem;
-}
-}
-
-@media (max-width: 500px) {
-.text-xxl {
-font-size: 2rem;
-}
-} 
-}
-
-/* Matrix 2xN Layout for Social Links */
 @media (max-width: 600px) {
     .links {
         justify-content: center;
