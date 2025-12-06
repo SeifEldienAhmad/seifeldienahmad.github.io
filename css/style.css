@@ -12,19 +12,53 @@
 --accent-color: #82aaff;
 }
 nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
 position: fixed;
 top: 15px;
-left: 5svw;
 width: 90svw;
 height: 60px;
-display: flex;
-justify-content: center;
 background-color: var(--bg-color);
 padding: 15px;
 z-index: 1000;
 box-shadow: 0 0px 10px grey;
 border-radius: 35px;
-flex-wrap: wrap;
+}
+#navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-menu {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 3%;
+}
+.main-menu a {
+text-decoration: none;
+color: var(--text-color);
+transition: all 0.5s ease;
+border-radius: 8px;
+}
+.main-menu a:hover {
+background-color: var(--link-hover);
+padding: 8px 15px;
+color: #000;
+}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+max-width: 100svw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-top: 5%;
+background-color: var(--bg-color);
+color: var(--text-color);
+animation: fadeIn 1.2s ease-in-out;
+transition: background-color 0.3s ease, color 0.3s ease;
 }
 #header-container{
   display: block;
@@ -32,40 +66,6 @@ flex-wrap: wrap;
 #ghost{
   display: none;
 }
-#navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-max-width: 900px;
-width: 100%;
-}
-nav .main-menu {
-display: flex;
-gap: 15px;
-}
-nav .main-menu a {
-text-decoration: none;
-color: var(--text-color);
-padding: 8px 15px;
-transition: all 0.5s ease;
-border-radius: 8px;
-}
-nav .main-menu a:hover {
-background-color: var(--link-hover);
-color: #000;
-}
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-max-width: 900px;
-margin: 40px auto;
-padding: 20px;
-background-color: var(--bg-color);
-color: var(--text-color);
-animation: fadeIn 1.2s ease-in-out;
-transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
 @keyframes fadeIn {
 0% { opacity: 0; transform: translateY(10px); }
 100% { opacity: 1; transform: translateY(0); }
@@ -90,6 +90,7 @@ color: #000;
 
 #brief{
 max-width: 900px;
+width: 90%ss;
 margin: 40px auto;
 padding: 20px;
 background-color: var(--card-bg);
@@ -193,7 +194,8 @@ text-align: center;
 }
 #about{
 max-width: 900px;
-margin: 60px auto;
+width: 90%;
+margin: 40px auto;
 padding: 20px;
 background-color: var(--card-bg);
 border-radius: 10px;
@@ -247,7 +249,8 @@ color: var(--link-hover);
 }
 #Projects{
 max-width: 900px;
-margin: 50px auto;
+width: 90%;
+margin: 40px auto;
 padding: 20px;
 background-color: var(--card-bg);
 border-radius: 10px;
@@ -400,7 +403,8 @@ animation: zoomIn 0.3s ease;
 }
 #Certificates {
 max-width: 900px;
-margin: 50px auto;
+width: 90%;
+margin: 40px auto;
 padding: 20px;
 background-color: var(--card-bg);
 border-radius: 10px;
@@ -555,7 +559,6 @@ animation: zoomIn 0.3s ease;
 from { transform: scale(0.7); opacity: 0; }
 to { transform: scale(1); opacity: 1; }
 }
-
 .close {
 position: absolute;
 top: 30px;
@@ -583,6 +586,7 @@ color: var(--link-hover);
 }
 #contact {
 max-width: 900px;
+width: 90%;
 margin: 40px auto;
 padding: 20px;
 background-color: var(--card-bg);
@@ -659,7 +663,13 @@ button:hover {
   color: var(--bg-color);
 }
 
-@media (max-width: 670px) {
+@media (max-width: 960px) {
+    .text-xxl {
+      font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
   nav .main-menu {
     display: none;
   }
@@ -681,7 +691,9 @@ button:hover {
     margin-left: 0;
     line-height: 1;
   }
-  
+  body{
+    padding-top: 7%;
+  }
   .toggle-theme {
     display: flex;
     align-items: center;
@@ -704,32 +716,25 @@ button:hover {
   .slider-wrapper {
     gap: 0;
   }
-
-  @media (max-width: 960px) {
-    .text-xxl {
-      font-size: 2.5rem;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .text-xxl {
-      font-size: 2rem;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-    .links {
-        justify-content: center;
-        gap: 15px 5px;
+  .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: row;
     }
     
     .links a {
-        flex-basis: 45%;
+        flex-basis: 35%;
         margin: 5px;
-        padding: 10px;
+        padding: 7px;
         border: 1px solid var(--link-color);
         border-radius: 5px;
         text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .text-xxl {
+      font-size: 2rem;
     }
 }
