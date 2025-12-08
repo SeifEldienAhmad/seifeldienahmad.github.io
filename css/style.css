@@ -727,13 +727,10 @@ button:hover {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      flex-direction: row;
     }
     
     .links a {
-        flex-basis: 35%;
-        margin: 5px;
-        padding: 7px;
+        flex-basis: 39.855%;
         border: 1px solid var(--link-color);
         border-radius: 5px;
         text-align: center;
