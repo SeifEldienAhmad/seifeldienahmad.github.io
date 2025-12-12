@@ -677,64 +677,65 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  nav .main-menu {
-    display: none;
-  }
-  
-  #header-container{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 0 5svw;
-  }
-  
-  #ghost {
-    display: block;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.8em;
-    color: var(--text-color);
-    margin-right: 25%;
-    margin-left: 0;
-    line-height: 1;
-  }
-  body{
-    padding-top: 7%;
-  }
-  .toggle-theme {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: 45px;
-    flex-shrink: 0;
-    font-size: 1.5em;
-    border: 1px solid var(--text-color);
-    border-radius: 50%; 
-    background: none;
-    cursor: pointer;
-    margin-top: 0;
-  }
+nav .main-menu {
+  display: none;
+}
 
-  .project-slide {
-    flex: 0 0 85%;
-  }
+#header-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 5svw;
+}
 
-  .slider-wrapper {
-    gap: 0;
-  }
-  .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    .links a {
-        flex-basis: 39.855%;
-        border: 1px solid var(--link-color);
-        border-radius: 5px;
-        text-align: center;
-    }
+#ghost {
+  display: block;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.8em;
+  color: var(--text-color);
+  margin-right: 25%;
+  margin-left: 0;
+  line-height: 1;
+}
+body{
+  padding-top: 7%;
+}
+.toggle-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  flex-shrink: 0;
+  font-size: 1.5em;
+  border: 1px solid var(--text-color);
+  border-radius: 50%; 
+  background: none;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.project-slide {
+  flex: 0 0 85%;
+}
+
+.slider-wrapper {
+  gap: 0;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+  
+.links a {
+    flex-basis: 38%;
+    border: 1px solid var(--link-color);
+    border-radius: 5px;
+    text-align: center;
+}
 }
 
 @media (max-width: 500px) {
