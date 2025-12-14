@@ -736,6 +736,9 @@ body{
     border-radius: 5px;
     text-align: center;
 }
+.links a:last-of-type{
+  margin-right: 11%;
+}
 }
 
 @media (max-width: 500px) {
