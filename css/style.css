@@ -352,8 +352,8 @@ box-shadow: 0 6px 15px var(--shadow);
     transform: translateY(-50%);
     width: 45px;
     height: 45px;
-    background-color: var(--hover-bg, rgba(0, 0, 0, 0.6));
-    color: var(--hover-color, white);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     border: none;
     border-radius: 50%;
     display: flex;
@@ -368,7 +368,7 @@ box-shadow: 0 6px 15px var(--shadow);
 }
 
 .arrow:hover {
-    background-color: var(--accent-color);
+    background-color: var(--link-hover);
     transform: translateY(-50%) scale(1.1);
 }
 
