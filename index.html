@@ -63,27 +63,27 @@
  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
+<nav aria-label="Primary navigation">
    <div class="container" id="navbar">
      <div class="main-menu">
        <a href="#brief">Home</a>
        <a href="#about">About</a>
-       <a href="#Projects">Projects</a>
-       <a href="#Certificates">Certificates</a>
+       <a href="#projects">Projects</a>
+       <a href="#certificates">Certificates</a>
        <a href="#contact">Contact</a>
      </div>
 </div>
 <div id="header-container">
 <h1 id="ghost">0xdaphantom</h1>
-<button class="toggle-theme" onclick="toggleTheme()">🌓</button>
+<button class="toggle-theme" onclick="toggleTheme()" aria-label="Toggle light and dark theme">🌓</button>
 </div>
  </nav>
  <div class="container" id="brief">
    <div class="profile-pic">
-     <img src="images/myphoto.jpeg" alt="Seif Eldien Ahmad Mohammad">
+     <img src="images/myphoto.png" alt="Seif Eldien Ahmad Mohammad">
    </div>
    <h1>Seif Eldien Ahmad Mohammad</h1>
-   <h2 id="aim"><strong>Red Teaming Student</strong></h2>
+   <h2 id="aim"><strong>AKA 0xdaphantom</strong></h2>
 <h3><strong>Penetration Tester</strong></h3>
    <p>I’m a passionate cybersecurity student focusing on Red Teaming and penetration testing. Currently studying at the Faculty of Science, I’m building hands-on skills in Linux, penetration testing, and offensive security.</p>
  </div>
@@ -122,7 +122,7 @@
     <a href="https://www.credly.com/users/seif-eldien-ahmad-mohammad" target="_blank"><i class="fa-solid fa-circle"></i> Credly</a>
 </div>
 </div>
-<div class="container" id="Projects">
+<div class="container" id="projects">
 <h1>Personal Portfolio</h1>
 <p class="center-text">A personal website was built to showcase my profile, skills, and projects in cybersecurity.</p>
 <div class="project-card">
@@ -188,7 +188,7 @@
 </div>
 </div>
 </div>
-<div class="container" id="Certificates">
+<div class="container" id="certificates">
 <h1>Certificates</h1>
 <p class="center-text">My certificates that I gained through my journey.</p>
 <div class="project-card">
@@ -255,10 +255,6 @@
 </div>
 </div>
 
-<div id="imgModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg">
-</div>
 </div>
 <div class="container" id="contact">
 <h1>Contact Me</h1>
@@ -273,7 +269,7 @@
 <form action="https://formspree.io/f/xqapvqda" method="POST">
   <input type="text" name="name" placeholder="Your name" required>
   <input type="email" name="email" placeholder="Your email" required>
-  <input type="text" class="message" placeholder="Your message..." required>
+  <textarea name="message" class="message" placeholder="Your message..." required></textarea>
   <button type="submit">Send</button>
 </form>
 </div>
@@ -282,7 +278,6 @@
 <img class="modal-content" id="modalImg">
 </div>
 <script src="js/slider.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="js/theme-toggle.js"></script>
 </body>
 </html>

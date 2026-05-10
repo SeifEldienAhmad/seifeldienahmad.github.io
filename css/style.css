@@ -10,6 +10,8 @@
 --active-bg: #82aaff;
 --active-color: #121212;
 --accent-color: #82aaff;
+--input-text: #e0e0e0;
+--button-bg: #82aaff;
 }
 nav {
 display: flex;
@@ -90,7 +92,7 @@ color: #000;
 
 #brief{
 max-width: 900px;
-width: 90%ss;
+width: 90%;
 margin: 40px auto;
 padding: 20px;
 background-color: var(--card-bg);
@@ -248,7 +250,7 @@ text-decoration: none;
 .links a:hover {
 color: var(--link-hover);
 }
-#Projects{
+#projects{
 max-width: 900px;
 width: 90%;
 margin: 40px auto;
@@ -283,6 +285,27 @@ box-shadow: 0 6px 15px var(--shadow);
 .slider-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.indicator {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.indicator.active {
+  background-color: var(--link-color);
+  transform: scale(1.1);
 }
 
 .project-slide {
@@ -331,14 +354,18 @@ box-shadow: 0 6px 15px var(--shadow);
 
 .project-slide a {
     display: inline-block;
-    margin-top: 0;
-    padding: 3px 6px;
+    margin-top: 12px;
+    padding: 8px 12px;
     color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 6px;
-    border-color: (var(--text-color));
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.project-slide a:hover {
+    transform: translateY(-1px);
 }
 
 .project-slide a:hover {
@@ -402,7 +429,7 @@ max-height: 80%;
 border-radius: 12px;
 animation: zoomIn 0.3s ease;
 }
-#Certificates {
+#certificates {
 max-width: 900px;
 width: 90%;
 margin: 40px auto;
@@ -509,16 +536,18 @@ input, .message {
 }
 
 button {
-  color: var(--active-color);
-  width: 102%;
-  background-attachment: #82aaff;
-  color: #121212;
-  padding: 10px;
+  width: 100%;
+  background-color: var(--button-bg);
+  color: var(--bg-color);
+  padding: 12px 16px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+  transform: translateY(-1px);
 }
 
 button:hover {

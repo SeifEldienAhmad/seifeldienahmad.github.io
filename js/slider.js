@@ -1,10 +1,13 @@
-let slideWidth;
+const sliderState = {};
 
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.getElementById('slider1');
+function initializeSlider(sliderId) {
+  const slider = document.getElementById(sliderId);
+  if (!slider) return;
+
   const slides = slider.querySelectorAll('.project-slide');
-  const totalRealSlides = slides.length;
+  if (!slides.length) return;
 
+  const totalRealSlides = slides.length;
   const firstClone = slides[0].cloneNode(true);
   const lastClone = slides[totalRealSlides - 1].cloneNode(true);
 
@@ -12,56 +15,73 @@ document.addEventListener('DOMContentLoaded', function() {
   slider.appendChild(firstClone);
 
   const updatedSlides = slider.querySelectorAll('.project-slide');
-  slideWidth = updatedSlides[0].offsetWidth + 20;
+  const slideWidth = updatedSlides[0].offsetWidth + 20;
+
+  sliderState[sliderId] = {
+    index: 1,
+    slideWidth,
+    totalSlides: updatedSlides.length,
+    realSlides: totalRealSlides,
+  };
 
   slider.style.transform = `translateX(-${slideWidth}px)`;
+  createIndicators(sliderId);
+}
 
-  createIndicators('slider1');
-});
+function updateSliderWidth(sliderId) {
+  const slider = document.getElementById(sliderId);
+  const state = sliderState[sliderId];
+  if (!slider || !state) return;
+
+  const slide = slider.querySelector('.project-slide');
+  if (!slide) return;
+
+  state.slideWidth = slide.offsetWidth + 20;
+  slider.style.transition = 'none';
+  slider.style.transform = `translateX(-${state.index * state.slideWidth}px)`;
+}
 
 function slide(sliderId, direction) {
   const slider = document.getElementById(sliderId);
-  const slides = slider.querySelectorAll('.project-slide');
-  const totalSlides = slides.length;
+  const state = sliderState[sliderId];
+  if (!slider || !state) return;
 
-  if (!slide.indices) slide.indices = {};
-  if (!(sliderId in slide.indices)) slide.indices[sliderId] = 1;
-
-  let newIndex = slide.indices[sliderId] + direction;
+  state.index += direction;
 
   slider.style.transition = 'transform 0.5s ease-in-out';
-  slider.style.transform = `translateX(-${newIndex * slideWidth}px)`;
+  slider.style.transform = `translateX(-${state.index * state.slideWidth}px)`;
 
-  slide.indices[sliderId] = newIndex;
-
-  slider.addEventListener('transitionend', function handleTransitionEnd() {
+  const handleTransitionEnd = () => {
     slider.removeEventListener('transitionend', handleTransitionEnd);
 
-    if (newIndex === 0) {
+    if (state.index === 0) {
+      state.index = state.totalSlides - 2;
       slider.style.transition = 'none';
-      slider.style.transform = `translateX(-${(totalSlides - 2) * slideWidth}px)`;
-      slide.indices[sliderId] = totalSlides - 2;
-    } else if (newIndex === totalSlides - 1) {
+      slider.style.transform = `translateX(-${state.index * state.slideWidth}px)`;
+    } else if (state.index === state.totalSlides - 1) {
+      state.index = 1;
       slider.style.transition = 'none';
-      slider.style.transform = `translateX(-${slideWidth}px)`;
-      slide.indices[sliderId] = 1;
+      slider.style.transform = `translateX(-${state.slideWidth}px)`;
     }
 
     updateIndicators(sliderId);
-  });
+  };
+
+  slider.addEventListener('transitionend', handleTransitionEnd);
 }
 
 function createIndicators(sliderId) {
   const slider = document.getElementById(sliderId);
-  const slides = slider.querySelectorAll('.project-slide');
-  const totalRealSlides = slides.length - 2;
+  const state = sliderState[sliderId];
+  if (!slider || !state) return;
+
   const indicatorsContainer = document.createElement('div');
   indicatorsContainer.className = 'indicators';
 
-  for (let i = 0; i < totalRealSlides; i++) {
+  for (let i = 0; i < state.realSlides; i++) {
     const indicator = document.createElement('span');
     indicator.className = 'indicator';
-    indicator.dataset.index = i;
+    indicator.dataset.index = i + 1;
     indicator.onclick = () => goToSlide(sliderId, i + 1);
     indicatorsContainer.appendChild(indicator);
   }
@@ -72,112 +92,57 @@ function createIndicators(sliderId) {
 
 function updateIndicators(sliderId) {
   const slider = document.getElementById(sliderId);
+  const state = sliderState[sliderId];
+  if (!slider || !state) return;
+
   const indicators = slider.parentElement.querySelectorAll('.indicator');
-  const currentIndex = slide.indices ? slide.indices[sliderId] - 1 : 0;
+  const activeIndex = state.index - 1;
 
   indicators.forEach((indicator, index) => {
-    indicator.classList.toggle('active', index === currentIndex);
+    indicator.classList.toggle('active', index === activeIndex);
   });
 }
 
 function goToSlide(sliderId, targetIndex) {
-  if (!slide.indices) slide.indices = {};
-  const currentIndex = slide.indices[sliderId];
-  const direction = targetIndex > currentIndex ? 1 : -1;
-  const steps = Math.abs(targetIndex - currentIndex);
-
-  for (let i = 0; i < steps; i++) {
-    setTimeout(() => slide(sliderId, direction), i * 500);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.getElementById('slider2');
-  const slides = slider.querySelectorAll('.project-slide');
-  const totalRealSlides = slides.length;
-
-  const firstClone = slides[0].cloneNode(true);
-  const lastClone = slides[totalRealSlides - 1].cloneNode(true);
-
-  slider.insertBefore(lastClone, slides[0]);
-  slider.appendChild(firstClone);
-
-  const updatedSlides = slider.querySelectorAll('.project-slide');
-  slideWidth = updatedSlides[0].offsetWidth + 20;
-
-  slider.style.transform = `translateX(-${slideWidth}px)`;
-
-  createIndicators('slider2');
-});
-
-function slide(sliderId, direction) {
   const slider = document.getElementById(sliderId);
-  const slides = slider.querySelectorAll('.project-slide');
-  const totalSlides = slides.length;
+  const state = sliderState[sliderId];
+  if (!slider || !state) return;
 
-  if (!slide.indices) slide.indices = {};
-  if (!(sliderId in slide.indices)) slide.indices[sliderId] = 1;
-
-  let newIndex = slide.indices[sliderId] + direction;
-
+  state.index = targetIndex;
   slider.style.transition = 'transform 0.5s ease-in-out';
-  slider.style.transform = `translateX(-${newIndex * slideWidth}px)`;
-
-  slide.indices[sliderId] = newIndex;
-
-  slider.addEventListener('transitionend', function handleTransitionEnd() {
-    slider.removeEventListener('transitionend', handleTransitionEnd);
-
-    if (newIndex === 0) {
-      slider.style.transition = 'none';
-      slider.style.transform = `translateX(-${(totalSlides - 2) * slideWidth}px)`;
-      slide.indices[sliderId] = totalSlides - 2;
-    } else if (newIndex === totalSlides - 1) {
-      slider.style.transition = 'none';
-      slider.style.transform = `translateX(-${slideWidth}px)`;
-      slide.indices[sliderId] = 1;
-    }
-
-    updateIndicators(sliderId);
-  });
-}
-
-function createIndicators(sliderId) {
-  const slider = document.getElementById(sliderId);
-  const slides = slider.querySelectorAll('.project-slide');
-  const totalRealSlides = slides.length - 2;
-  const indicatorsContainer = document.createElement('div');
-  indicatorsContainer.className = 'indicators';
-
-  for (let i = 0; i < totalRealSlides; i++) {
-    const indicator = document.createElement('span');
-    indicator.className = 'indicator';
-    indicator.dataset.index = i;
-    indicator.onclick = () => goToSlide(sliderId, i + 1);
-    indicatorsContainer.appendChild(indicator);
-  }
-
-  slider.parentElement.appendChild(indicatorsContainer);
+  slider.style.transform = `translateX(-${state.index * state.slideWidth}px)`;
   updateIndicators(sliderId);
 }
 
-function updateIndicators(sliderId) {
-  const slider = document.getElementById(sliderId);
-  const indicators = slider.parentElement.querySelectorAll('.indicator');
-  const currentIndex = slide.indices ? slide.indices[sliderId] - 1 : 0;
+function openModal(imageElement) {
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+  if (!modal || !modalImg || !imageElement) return;
 
-  indicators.forEach((indicator, index) => {
-    indicator.classList.toggle('active', index === currentIndex);
+  modalImg.src = imageElement.src;
+  modalImg.alt = imageElement.alt || 'Project screenshot';
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  const modal = document.getElementById('imgModal');
+  if (!modal) return;
+  modal.style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initializeSlider('slider1');
+  initializeSlider('slider2');
+
+  document.addEventListener('click', (event) => {
+    const image = event.target.closest('.project-slide img');
+    if (image) {
+      openModal(image);
+    }
   });
-}
 
-function goToSlide(sliderId, targetIndex) {
-  if (!slide.indices) slide.indices = {};
-  const currentIndex = slide.indices[sliderId];
-  const direction = targetIndex > currentIndex ? 1 : -1;
-  const steps = Math.abs(targetIndex - currentIndex);
-
-  for (let i = 0; i < steps; i++) {
-    setTimeout(() => slide(sliderId, direction), i * 500);
-  }
-}
+  window.addEventListener('resize', () => {
+    updateSliderWidth('slider1');
+    updateSliderWidth('slider2');
+  });
+});
