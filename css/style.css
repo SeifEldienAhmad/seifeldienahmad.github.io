@@ -93,7 +93,7 @@ background-color: var(--accent-color);
 color: var(--active-color);
 }
 
-#brief{
+#brief {
 max-width: 900px;
 width: 90%;
 margin: 40px auto;
@@ -145,28 +145,6 @@ padding: 0;
 text-align: left;
 }
 
-#brief {
-max-width: 900px;
-margin: 40px auto;
-padding: 20px;
-background-color: var(--card-bg);
-border-radius: 10px;
-box-shadow: 0 0 10px var(--shadow);
-}
-
-.profile-pic {
-  text-align: center;
-  margin-bottom: 5px;
-}
-
-.profile-pic img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--link-color);
-  display: inline-block;
-}
 h1{
 font-family: Georgia, 'Times New Roman', Times, serif;
 font-weight: bold;
@@ -254,6 +232,11 @@ text-decoration: none;
 .links a:hover {
 color: var(--link-hover);
 }
+
+.contact-link {
+  font-weight: 600;
+}
+
 #projects{
 max-width: 900px;
 width: 90%;
@@ -514,7 +497,7 @@ h1, h2 {
 form {
   display: flex;
   flex-direction: column;
-  margin: center;
+  margin: 0;
   padding: 8px 12px 12px 0;
   gap: 12px;
 }
